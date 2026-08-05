@@ -4,7 +4,7 @@ date: 2024-01-01
 weight: 1
 chapter: false
 pre: " <b> 1. </b> "
-includeInReport: false
+includeInReport: true
 ---
 **Trong trang này** bạn sẽ tìm thấy tổng quan về các mục nhật ký công việc hàng tuần cho kỳ thực tập. Mỗi tuần trình bày chi tiết các mục tiêu, nhiệm vụ và thành tựu đã thực hiện trong suốt chương trình.
 

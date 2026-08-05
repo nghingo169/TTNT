@@ -4,7 +4,7 @@ date: 2026-07-30
 weight: 6
 chapter: false
 pre: " <b> 6. </b> "
-includeInReport: false
+includeInReport: true
 ---
 
 Trong suốt thời gian thực tập tại **chương trình First Cloud AI Journey (FCAJ)** từ **10/06/2026** đến **30/07/2026**, tôi đã có cơ hội học hỏi, rèn luyện và áp dụng kiến thức đã được trang bị tại trường vào môi trường làm việc thực tế.  
