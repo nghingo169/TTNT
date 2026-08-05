@@ -581,6 +581,8 @@ def preprocess_markdown(content, meta=None):
     content = re.sub(r"\s*\{\{%\s*/notice\s*%\}\}", r"\n:::\n", content)
 
     content = content.replace("&emsp;", r"\qquad ")
+    content = content.replace("\u202f", " ")
+    content = content.replace("\u00a0", " ")
     content = content.replace("\u2705", r"\checkmark")
     content = content.replace("\u2610", r"$\square$")
     content = re.sub(r"⚠\ufe0f?", "!", content)
