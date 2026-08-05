@@ -1,56 +1,71 @@
 ---
-title: "Event 2"
-date: 2024-01-01
-weight: 1
+title: "Cuộc thi Cloud Competition của AWS - Vòng chung kết"
+date: 2026-07-11
+weight: 2
 chapter: false
 pre: " <b> 4.2. </b> "
+includeInReport: true
 ---
 
+{{% notice warning %}}
+⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
+{{% /notice %}}
 
-# Bài thu hoạch: AI Agent Build Week
+# Bài thu hoạch: Cuộc thi Cloud Competition của AWS - Vòng chung kết
 
-### Thông tin sự kiện
+Vào ngày **11/07/2026**, tôi đã có cơ hội đến xem với vai trò **khán giả** tại **vòng chung kết** của cuộc thi **AWS Cloud Competition** do **Amazon Web Services (AWS)** tổ chức. Sau vòng loại vào ngày 20/06/2026, những đội mạnh nhất đã giành quyền vào vòng chung kết này, nơi họ tiếp tục đối đầu với nhau bằng cách trả lời các câu hỏi trắc nghiệm về chủ đề cloud computing. Tôi chỉ đến với tư cách người xem, không phải là người tham gia thi đấu.
 
-&emsp; **Tên sự kiện:** AI Agent Build Week
+### Thể thức cuộc thi
 
-&emsp; **Thời gian:** 25/07/2026
+- Được tổ chức bởi AWS, với sự tham gia của những đội mạnh nhất vượt qua vòng loại
+- Vòng chung kết càng trở nên gay cấn hơn, khi các đội thi đấu qua nhiều vòng **câu hỏi trắc nghiệm** về các chủ đề cloud
+- Bao phủ nhiều khái niệm cloud: dịch vụ AWS cốt lõi, kiến trúc cloud, bảo mật, mô hình giá và best practices
 
-&emsp; **Địa điểm:** Tầng 26, Bitexco Tower, 02 Hải Triều, Phường Bến Nghé, Quận 1, Thành phố Hồ Chí Minh
+### Nội Dung Nổi Bật
 
-&emsp; **Vai trò:** Người tham dự
+#### Màn tranh tài chung kết
+- Không khí sôi động và căng thẳng hơn vòng loại rất nhiều, khi những đội xuất sắc nhất tranh tài vì ngôi vô địch
+- Độ khó của câu hỏi được nâng lên rõ rệt, thử thách không chỉ kiến thức mà còn cả tốc độ và sự bình tĩnh
+- Bảng điểm trực tiếp liên tục thay đổi khi các đội đuổi kịp và vượt lên nhau, khiến sự kiện gay cấn đến phút cuối
 
-### Nội dung sự kiện
+#### Câu hỏi nâng cao và chủ đề sâu hơn
+- **Dịch vụ AWS cốt lõi**: EC2, S3, RDS, Lambda và các cấu hình dịch vụ nâng cao hơn
+- **Kiến trúc cloud**: Well-Architected Framework, khả năng mở rộng, tính sẵn sàng cao, khôi phục thảm họa (disaster recovery)
+- **Bảo mật**: IAM, mã hóa, mô hình trách nhiệm chung, các best practices bảo mật nâng cao
+- **Giá cả và tối ưu chi phí**: savings plans, công cụ quản lý chi phí và các tình huống giá phức tạp
 
-Tham gia workshop "AI Agent Build Week" do FCAJ tổ chức. Trong sự kiện, các đội đã thi đấu hackathon tới chia sẻ lại cách họ triển khai dự án của mình, từ các bước hình thành ý tưởng, thiết kế, triển khai, cho đến các vấn đề gặp phải trong quá trình thực hiện. Các đội cũng chia sẻ cách họ sử dụng các dịch vụ AWS để giải quyết vấn đề trong dự án của mình.
+#### Màn trình diễn của nhà vô địch
+- Đội giành chiến thắng thể hiện kiến thức vượt trội, sự bình tĩnh dưới áp lực và tinh thần đồng đội xuất sắc
+- Khoảnh khắc theo dõi câu trả lời cuối cùng và lễ công bố nhà vô địch là một kỷ niệm đáng nhớ
+- Sự kiện khép lại bằng buổi lễ trao giải vinh danh thành tích của tất cả các đội tham gia
 
-### Các dự án ấn tượng
+### Những Gì Học Được
 
-- **KFC conversational ordering:** Dự án chatbot cho phép khách hàng đặt hàng tại KFC thông qua các cuộc trò chuyện.
-- **Hệ thống chống rửa tiền:** Dự án hệ thống giúp các ngân hàng và tổ chức tài chính phát hiện, ngăn chặn các hoạt động rửa tiền.
+- Vòng chung kết cho tôi thấy **trình độ kiến thức cloud cao nhất** mà các chuyên gia cloud hàng đầu được kỳ vọng đạt được.
+- Các câu hỏi nâng cao truyền cảm hứng để tôi **đẩy mạnh việc học tập của bản thân** hơn nữa trong các lĩnh vực như bảo mật, giá cả và kiến trúc AWS nâng cao.
+- Chứng kiến đội vô địch củng cố tầm quan trọng của **tinh thần đồng đội, sự chuẩn bị kỹ lưỡng và giữ bình tĩnh dưới áp lực**.
+- Việc so sánh giữa vòng chung kết và vòng loại cho tôi cái nhìn rõ ràng về **hành trình học tập** cần thiết để đi từ nền tảng vững chắc đến trình độ chuyên gia.
 
-### Những gì học được
+### Hình ảnh sự kiện
 
-- Quy trình phát triển AI Agent toàn diện: Tiếp thu góc nhìn tổng quan về toàn bộ vòng đời của một sản phẩm AI, từ bước định hình ý tưởng, thiết kế kiến trúc hệ thống cho đến khâu triển khai lên hạ tầng đám mây và tối ưu hóa vận hành.
+![Event 2 - Ảnh 1](/images/4-EventsParticipated/event2-1.png)
 
-- Tích hợp công nghệ Cloud & AI vào thực tế: Hiểu rõ cách các đội thi xuất sắc kết hợp hạ tầng đám mây AWS với các mô hình trí tuệ nhân tạo để xử lý dữ liệu, phản hồi thời gian thực và đảm bảo hiệu năng cho các ứng dụng thông minh.
+![Event 2 - Ảnh 2](/images/4-EventsParticipated/event2-2.png)
 
-- Tư duy giải quyết bài toán kỹ thuật thực tế: Học hỏi được những kinh nghiệm đắt giá trong việc xử lý các rào cản kỹ thuật như độ trễ hệ thống (latency), khả năng mở rộng (scalability), tính bảo mật và bài toán tối ưu chi phí khi đưa AI vào sản phẩm.
+### Trải nghiệm với vai trò khán giả
 
-- Tư duy phát triển sản phẩm hướng người dùng: Nhận thức sâu sắc về việc kết nối giữa kiến trúc kỹ thuật phức tạp với bài toán kinh doanh và trải nghiệm người dùng cuối, đảm bảo giải pháp công nghệ mang lại giá trị thực tiễn cao nhất.
+Theo dõi vòng chung kết cuộc thi AWS Cloud Competition với tư cách khán giả là sự kết thúc hoàn hảo cho hành trình theo dõi cuộc thi:
 
-### Trải nghiệm và hình ảnh
+#### Chứng kiến trình độ thi đấu cao nhất
+- Các câu hỏi khó hơn và nhịp độ nhanh hơn vòng loại, khiến việc theo dõi trở thành một thử thách thú vị.
+- Tôi có thể đo lường kiến thức của bản thân đã tiến bộ bao nhiêu kể từ vòng loại bằng cách đếm số câu hỏi mình tự trả lời được.
 
-- Không khí sự kiện & Tinh thần kết nối: Buổi workshop mang lại một không khí vô cùng nhiệt huyết và truyền cảm hứng. Việc lắng nghe trực tiếp hành trình phát triển dự án từ các đội thi hackathon đã tạo nên một không gian giao lưu kỹ thuật mở cởi mở, giàu tính kết nối.
+#### Một hành trình học tập trọn vẹn
+- Từ vòng loại ngày 20/06 đến vòng chung kết ngày 11/07 đã cho tôi bức tranh đầy đủ về cấu trúc của cuộc thi.
+- Trải nghiệm này thúc đẩy tôi tiếp tục học tập để một ngày nào đó có thể tự mình tham gia cuộc thi, không chỉ với vai trò khán giả.
 
-- Ấn tượng cá nhân: Những chia sẻ chân thực về khó khăn thực tế và cách đưa ra quyết định kiến trúc của các đội thi giúp tôi tích lũy được nhiều góc nhìn thực chiến mà sách vở ít khi đề cập. Rất ấn tượng khi thấy những khái niệm AI và Cloud lý thuyết được hiện thực hóa thành các sản phẩm giải quyết bài toán cụ thể.
+#### Kỷ niệm và cảm hứng
+- Lễ trao giải đầy cảm hứng, cho thấy sự cống hiến và tinh thần đồng đội có thể đưa một nhóm người đi xa đến mức nào.
+- Bầu không khí cạnh tranh nhưng hỗ trợ lẫn nhau khiến toàn bộ sự kiện trở nên đáng nhớ và tạo động lực.
 
-- Đánh giá chung: Đây là một trải nghiệm đặc biệt giá trị, giúp mở rộng góc nhìn chuyên môn và tiếp thêm động lực lớn để tôi chủ động nghiên cứu, áp dụng các mô hình AI Agent cũng như kiến trúc Cloud vào các dự án cá nhân trong tương lai.
-
-![Demo KFC Order Liveboard](/images/4-EventsParticipated/event2_1.png)
-*Đội thi trình bày demo "KFC Order Liveboard" — theo dõi đơn hàng và hoạt động AI Agent theo thời gian thực.*
-
-![Kiến trúc AABW - Adaptive AML/KYT Workflow Engine](/images/4-EventsParticipated/event2_2.png)
-*Kiến trúc hệ thống "AABW - Adaptive AML/KYT Workflow Engine" giúp phát hiện và xử lý các giao dịch đáng ngờ.*
-
-![Tại sự kiện AI Agent Build Week](/images/4-EventsParticipated/event2_3.png)
-*Khoảnh khắc tham gia sự kiện AI Agent Build Week.*
+> Tổng thể, việc tham dự vòng chung kết cuộc thi AWS Cloud Competition với vai trò khán giả là một trải nghiệm thú vị và bổ ích. Nó hoàn thiện hành trình theo dõi cuộc thi của tôi, đào sâu hiểu biết về các chủ đề cloud nâng cao và truyền cảm hứng để tôi tiếp tục phát triển với tư cách một nhà phát triển cloud.

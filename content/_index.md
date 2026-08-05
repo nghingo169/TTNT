@@ -10,23 +10,23 @@ chapter: false
 
 
 ### Student Information:
-&emsp; **Full Name:** Tran Dang Khoa
+&emsp; **Full Name:** Le Phuoc Minh Thien
 
-&emsp; **Phone Number:** 0902937994
+&emsp; **Phone Number:** 0768624405
 
-&emsp; **Email:** dangkhoatran0511@gmail.com
+&emsp; **Email:** minhthien.lee2404@gmail.com
 
-&emsp; **University:** Ho Chi Minh City University of Technology
+&emsp; **University:** Ho Chi Minh City University of Technology - Vietnam National University
 
 &emsp; **Major:** Computer Science
 
-&emsp; **Class:** CC23KHM4
+&emsp; **Class:** CC23KHM6
 
 &emsp; **Internship Company:** Amazon Web Services Viet Nam Company Limited
 
 &emsp; **Internship Position:** Workforce Bootcamp - First Cloud AI Journey
 
-&emsp; **Internship Duration:** From 15/6/2026 to 14/8/2026
+&emsp; **Internship Duration:** From 01/06/2026 to 10/08/2026
 
 ![Your profile picture](/images/avatar.png)
 

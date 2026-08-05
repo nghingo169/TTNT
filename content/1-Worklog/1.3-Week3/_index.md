@@ -1,36 +1,42 @@
 ---
 title: "Week 3 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-06-24
+weight: 3
 chapter: false
 pre: " <b> 1.3. </b> "
+includeInReport: true
+reportTableColumns:
+  - Day
+  - Task
+  - Completion Date
+reportHeadings:
+  - Week 3 Objectives
+  - Tasks to be carried out this week
+  - Week 3 Achievements
+reportType: worklog
 ---
-
 
 ### Week 3 Objectives:
 
-* Understand how to monitor AWS resources with Amazon CloudWatch (metrics, logs, alarms).
-* Understand how Amazon CloudFront works as a CDN and how it integrates with S3.
-* Practice setting up monitoring and content delivery for a simple workload.
+* Master AWS Compute services: EC2, Lambda, Step Functions and Application Load Balancer.
+* Deploy an EC2 instance, configure security groups, IAM role and test SSH.
+* Build a simple Lambda function and integrate with API Gateway.
+* Explore Step Functions to orchestrate Lambda.
 
 ### Tasks to be carried out this week:
-| Day | Task | Date |
-| --- | --- | --- |
-| 4 | - Learn CloudWatch: <br>&emsp; + Metrics <br>&emsp; + Log groups & log streams <br>&emsp; + Alarms & dashboards | 06/24/2026 |
-| 5 | - **Practice:** create a CloudWatch alarm on EC2 CPU utilization; ship EC2 logs to CloudWatch Logs using the CloudWatch agent | 06/25/2026 |
-| 6 | - Learn CloudFront: <br>&emsp; + Distributions & origins (S3/EC2) <br>&emsp; + Edge locations & caching behavior <br>&emsp; + Origin Access Control (OAC) | 06/26/2026 |
-| 2 | - **Practice:** create a CloudFront distribution in front of an S3 bucket, restrict direct S3 access with OAC, and test cache invalidation | 06/29/2026 |
-| 3 | - Build a CloudWatch dashboard combining EC2 and CloudFront metrics <br> - Review the week's work with mentor | 06/30/2026 |
 
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | ---- | ---------- | --------------- | ------------------ |
+| 1 | - Read EC2 fundamentals documentation <br> - Launch a t3.micro instance, set up key pair and IAM role with S3 read access | 06/18/2026 | 06/18/2026 | https://cloudjourney.awsstudygroup.com/ |
+| 2 | - Create Security Group (SSH, HTTP, HTTPS) <br> - Open ports 22, 80, 443 and verify SSH connection from laptop | 06/19/2026 | 06/19/2026 | https://cloudjourney.awsstudygroup.com/ |
+| 3 | - Create a "HelloWorld" Lambda function using Python <br> - Configure Python 3.11 runtime | 06/20/2026 | 06/20/2026 | https://cloudjourney.awsstudygroup.com/ |
+| 4 | - Set up API Gateway (HTTP API) as a trigger for Lambda <br> - Test with cURL `GET /hello` | 06/21/2026 | 06/21/2026 | https://cloudjourney.awsstudygroup.com/ |
+| 5 | - Design a simple Step Function to invoke Lambda "HelloWorld" and run via console | 06/22/2026 | 06/22/2026 | https://cloudjourney.awsstudygroup.com/ |
+| 6 | - Read Application Load Balancer documentation <br> - Take notes on how to integrate ALB with EC2 | 06/23/2026 | 06/23/2026 | https://cloudjourney.awsstudygroup.com/ |
 
 ### Week 3 Achievements:
 
-* Set up CloudWatch alarms and log collection for an EC2 instance.
-
-* Understood how CloudFront caches and serves content from edge locations.
-
-* Deployed a CloudFront distribution in front of an S3 bucket with Origin Access Control, so the bucket is no longer reachable directly from the public internet.
-
-* Built a basic CloudWatch dashboard to track resource health at a glance.
-
-* Understood how monitoring (CloudWatch) and content delivery (CloudFront) fit into a production-ready architecture.
+* EC2 instance launched with IAM role granting S3 access; security group configured with necessary ports; SSH connection successful.
+* "HelloWorld" Lambda deployed, integrated with API Gateway, and returning correct response.
+* Step Function created and orchestrated Lambda successfully.
+* Understood how Application Load Balancer works and prepared for multi-layer architecture in the project.

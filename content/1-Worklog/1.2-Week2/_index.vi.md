@@ -1,36 +1,35 @@
 ---
 title: "Worklog Tuần 2"
-date: 2024-01-01
-weight: 1
+date: 2026-06-17
+weight: 2
 chapter: false
 pre: " <b> 1.2. </b> "
+reportTableColumns:
+  - Thứ
+  - Công việc
+  - Ngày hoàn thành
+reportType: worklog
 ---
 
+### Tuần 2 Mục tiêu:
 
-### Mục tiêu tuần 2:
+* Khám phá sâu hơn các dịch vụ lưu trữ trên AWS: Amazon S3 nâng cao, EBS và AWS Backup.
+* Thực hành quản lý bucket policies, versioning, Server‑Side Encryption và lifecycle rules.
+* Tạo, gắn và snapshot một EBS volume, sau đó thực hiện restore trên EC2.
 
-* Hiểu các dịch vụ lưu trữ và định danh cốt lõi của AWS: Amazon S3 và IAM.
-* Hiểu các khái niệm networking cơ bản của AWS với Amazon VPC.
-* Thực hành tạo và bảo mật tài nguyên cloud theo nguyên tắc least privilege.
+### Các công việc trong tuần:
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc | Ngày |
-| --- | --- | --- |
-| 4 | - Tìm hiểu Amazon S3: <br>&emsp; + Bucket & object <br>&emsp; + Storage classes <br>&emsp; + Versioning <br> - **Thực hành:** tạo bucket, upload/download object, cấu hình bucket policy | 17/06/2026 |
-| 5 | - Tìm hiểu IAM: <br>&emsp; + User, group, role <br>&emsp; + Policy & least privilege <br> - **Thực hành:** tạo IAM role với policy giới hạn quyền và kiểm tra quyền truy cập | 18/06/2026 |
-| 6 | - Tìm hiểu VPC cơ bản: <br>&emsp; + VPC & subnet (public/private) <br>&emsp; + Route table & internet gateway <br>&emsp; + Security group so với NACL | 19/06/2026 |
-| 2 | - **Thực hành:** dựng một VPC với subnet public/private; khởi tạo EC2 instance bên trong và kiểm soát truy cập bằng security group | 22/06/2026 |
-| 3 | - Tìm hiểu S3 Gateway endpoint và các mô hình kết nối riêng tư <br> - Review công việc trong tuần cùng mentor | 23/06/2026 |
+| Ngày | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| ---- | --------- | ------------ | --------------- | ------------------- |
+| 1 | - Đọc tài liệu S3 Advanced, tạo bucket S3 với versioning và Server‑Side Encryption (SSE‑AES) | 06/12/2026 | 06/12/2026 | https://cloudjourney.awsstudygroup.com/ |
+| 2 | - Thiết lập Lifecycle Policy để tự động chuyển objects sang S3 Glacier sau 30 ngày | 06/13/2026 | 06/13/2026 | https://cloudjourney.awsstudygroup.com/ |
+| 3 | - Tạo EC2 instance (t3.micro), tạo EBS gp3 volume, attach vào instance và tạo snapshot | 06/14/2026 | 06/14/2026 | https://cloudjourney.awsstudygroup.com/ |
+| 4 | - Thực hiện restore snapshot thành một volume mới và mount lên EC2 để kiểm tra dữ liệu | 06/15/2026 | 06/15/2026 | https://cloudjourney.awsstudygroup.com/ |
+| 5 | - Sử dụng AWS Backup để tạo backup plan cho EBS volume và kiểm tra restore qua Backup service | 06/16/2026 | 06/16/2026 | https://cloudjourney.awsstudygroup.com/ |
 
+### Thành tựu tuần 2:
 
-### Kết quả đạt được tuần 2:
-
-* Hiểu các khái niệm cốt lõi của S3 (bucket, storage classes, versioning) và đã tạo/cấu hình một S3 bucket kèm bucket policy.
-
-* Hiểu kiến thức nền tảng của IAM và đã tạo một IAM role với quyền hạn theo nguyên tắc least privilege.
-
-* Dựng được một VPC cơ bản với subnet public/private và kiểm soát traffic bằng security group.
-
-* Hiểu cách S3 Gateway endpoint giúp tài nguyên trong VPC truy cập S3 riêng tư mà không cần đi qua internet công cộng.
-
-* Có cái nhìn rõ ràng hơn về cách storage, identity và networking phối hợp với nhau để bảo mật một workload.
+* Bucket S3 được cấu hình versioning, SSE‑AES và lifecycle policy thành công.
+* EBS gp3 volume được tạo, snapshot và restore thành công trên EC2.
+* Backup plan cho EBS đã được thiết lập và kiểm tra qua AWS Backup.
+* Nắm vững các tính năng lưu trữ nâng cao và best practice bảo mật dữ liệu trên AWS.

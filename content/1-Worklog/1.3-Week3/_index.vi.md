@@ -1,36 +1,35 @@
 ---
 title: "Worklog Tuần 3"
-date: 2024-01-01
-weight: 1
+date: 2026-06-24
+weight: 3
 chapter: false
 pre: " <b> 1.3. </b> "
+reportTableColumns:
+  - Thứ
+  - Công việc
+  - Ngày hoàn thành
+reportType: worklog
 ---
 
+### Tuần 3 Mục tiêu:
 
-### Mục tiêu tuần 3:
+* Tìm hiểu về networking trên AWS: VPC, Subnet, Route Table, Internet Gateway, NAT Gateway, Security Group và Network ACL.
+* Thực hành xây dựng một VPC hai tầng (public/private subnets) với NAT Gateway để EC2 private có thể ra internet.
+* Kết nối VPC với S3 thông qua VPC Endpoint (Gateway).
 
-* Hiểu cách giám sát tài nguyên AWS bằng Amazon CloudWatch (metrics, logs, alarms).
-* Hiểu cách Amazon CloudFront hoạt động như một CDN và cách nó tích hợp với S3.
-* Thực hành thiết lập giám sát và phân phối nội dung cho một workload đơn giản.
+### Các công việc trong tuần:
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc | Ngày |
-| --- | --- | --- |
-| 4 | - Tìm hiểu CloudWatch: <br>&emsp; + Metrics <br>&emsp; + Log group & log stream <br>&emsp; + Alarm & dashboard | 24/06/2026 |
-| 5 | - **Thực hành:** tạo CloudWatch alarm theo dõi CPU utilization của EC2; đẩy log từ EC2 lên CloudWatch Logs bằng CloudWatch agent | 25/06/2026 |
-| 6 | - Tìm hiểu CloudFront: <br>&emsp; + Distribution & origin (S3/EC2) <br>&emsp; + Edge location & caching behavior <br>&emsp; + Origin Access Control (OAC) | 26/06/2026 |
-| 2 | - **Thực hành:** tạo CloudFront distribution đặt trước một S3 bucket, giới hạn truy cập trực tiếp vào S3 bằng OAC, và kiểm tra cache invalidation | 29/06/2026 |
-| 3 | - Dựng CloudWatch dashboard kết hợp metrics của EC2 và CloudFront <br> - Review công việc trong tuần cùng mentor | 30/06/2026 |
+| Ngày | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| ---- | --------- | ------------ | --------------- | ------------------- |
+| 1 | - Thiết kế VPC 2-tier: public subnet (Load Balancer, Bastion Host) và private subnet (Application, Database) | 06/19/2026 | 06/19/2026 | https://cloudjourney.awsstudygroup.com/ |
+| 2 | - Tạo VPC, public subnet (10.0.1.0/24), private subnet (10.0.2.0/24), Internet Gateway, NAT Gateway và Route Tables | 06/20/2026 | 06/20/2026 | https://cloudjourney.awsstudygroup.com/ |
+| 3 | - Launch EC2 instance trong private subnet, cấu hình Security Group để chỉ cho phép traffic từ Bastion Host | 06/21/2026 | 06/21/2026 | https://cloudjourney.awsstudygroup.com/ |
+| 4 | - Tạo VPC Endpoint (Gateway) cho S3, gán policy để EC2 private truy cập S3 mà không qua internet | 06/22/2026 | 06/22/2026 | https://cloudjourney.awsstudygroup.com/ |
+| 5 | - Kiểm tra kết nối: dùng Bastion Host SSH vào EC2 private, verify S3 access và internet access qua NAT Gateway | 06/23/2026 | 06/23/2026 | https://cloudjourney.awsstudygroup.com/ |
 
+### Thành tựu tuần 3:
 
-### Kết quả đạt được tuần 3:
-
-* Thiết lập được CloudWatch alarm và thu thập log cho một EC2 instance.
-
-* Hiểu cách CloudFront cache và phân phối nội dung từ các edge location.
-
-* Triển khai được một CloudFront distribution đặt trước S3 bucket kèm Origin Access Control, giúp bucket không còn bị truy cập trực tiếp từ internet công cộng.
-
-* Dựng được một CloudWatch dashboard cơ bản để theo dõi tình trạng tài nguyên.
-
-* Hiểu cách giám sát (CloudWatch) và phân phối nội dung (CloudFront) phối hợp trong một kiến trúc sẵn sàng cho production.
+* VPC 2‑tier được thiết kế và triển khai thành công với public/private subnet, IGW, NAT Gateway, route tables.
+* EC2 instance trong private subnet có thể ra internet (qua NAT) và truy cập S3 (qua VPC Endpoint) theo đúng yêu cầu.
+* Hiểu rõ cách Security Group và Network ACL hoạt động ở mỗi tầng.
+* Có khả năng triển khai hạ tầng mạng cơ bản cho một ứng dụng web an toàn trên AWS.

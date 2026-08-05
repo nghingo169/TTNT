@@ -7,23 +7,23 @@ chapter: false
 
 # Báo cáo thực tập
 ### Thông tin sinh viên:
-&emsp; **Họ và tên:** Trần Đăng Khoa
+&emsp; **Họ và tên:** Le Phuoc Minh Thien
 
-&emsp; **Số điện thoại:** 0902937994
+&emsp; **Số điện thoại:** 0768624405
 
-&emsp; **Email:** dangkhoatran0511@gmail.com
+&emsp; **Email:** minhthien.lee2404@gmail.com
 
-&emsp; **Trường:** Đại học Bách Khoa Thành phố Hồ Chí Minh
+&emsp; **Trường:** Ho Chi Minh City University of Technology - Vietnam National University
 
-&emsp; **Ngành:** Khoa học máy tính
+&emsp; **Ngành:** Computer Science
 
-&emsp; **Lớp:** CC23KHM4
+&emsp; **Lớp:** CC23KHM6
 
 &emsp; **Công ty thực tập:** Công ty TNHH Amazon Web Services Viet Nam
 
 &emsp; **Vị trí thực tập:** Workforce Bootcamp - First Cloud AI Journey
 
-&emsp; **Thời gian thực tập:** Từ ngày 15/6/2026 đến ngày 14/8/2026
+&emsp; **Thời gian thực tập:** Từ ngày 01/06/2026 đến ngày 10/08/2026
 
 ![Ảnh đại diện của bạn](/images/avatar.png)
 

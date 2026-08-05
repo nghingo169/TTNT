@@ -1,36 +1,40 @@
 ---
 title: "Week 4 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-07-01
+weight: 4
 chapter: false
 pre: " <b> 1.4. </b> "
+includeInReport: true
+reportTableColumns:
+  - Day
+  - Task
+  - Completion Date
+reportHeadings:
+  - Week 4 Objectives
+  - Tasks to be carried out this week
+  - Week 4 Achievements
+reportType: worklog
 ---
-
 
 ### Week 4 Objectives:
 
-* Get an overview of Amazon SageMaker and its role in the machine learning lifecycle.
-* Understand text embeddings and vector similarity — the foundation of retrieval used later in RAG.
-* Run a first hands-on notebook and inference example on SageMaker.
+* Explore AWS security and identity management services: IAM, KMS, CloudTrail and GuardDuty.
+* Practice creating IAM Users, Groups, Roles and applying Least‑Privilege Policy.
+* Set up CloudTrail to record account activity and enable GuardDuty for threat detection.
 
 ### Tasks to be carried out this week:
-| Day | Task | Date |
-| --- | --- | --- |
-| 4 | - Learn SageMaker overview: <br>&emsp; + Studio / notebook instances <br>&emsp; + Training jobs & model registry <br>&emsp; + Endpoints | 07/01/2026 |
-| 5 | - **Practice:** launch a SageMaker notebook instance, load a small pretrained model, and run inference | 07/02/2026 |
-| 6 | - Learn text embeddings: <br>&emsp; + What an embedding is <br>&emsp; + Cosine similarity <br>&emsp; + Why embeddings enable semantic search | 07/03/2026 |
-| 2 | - **Practice:** generate embeddings for a small set of text passages inside a SageMaker notebook and compute similarity scores between them | 07/06/2026 |
-| 3 | - Explore the HotpotQA dataset structure (questions, supporting facts, context paragraphs) to prepare for the RAG project | 07/07/2026 |
 
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | ---- | ---------- | --------------- | ------------------ |
+| 1 | - Read IAM fundamentals documentation <br> - Create IAM User, attach "ReadOnlyAccess" policy | 06/23/2026 | 06/23/2026 | https://cloudjourney.awsstudygroup.com/ |
+| 2 | - Create IAM Role for EC2 with S3 read/write and SSM GetParameters permissions | 06/24/2026 | 06/24/2026 | https://cloudjourney.awsstudygroup.com/ |
+| 3 | - Practice creating a Customer Managed Key (CMK) using AWS KMS <br> - Encrypt an S3 object | 06/25/2026 | 06/25/2026 | https://cloudjourney.awsstudygroup.com/ |
+| 4 | - Enable CloudTrail for all regions <br> - Review logs in S3 bucket | 06/26/2026 | 06/26/2026 | https://cloudjourney.awsstudygroup.com/ |
+| 5 | - Enable GuardDuty <br> - View sample findings and document response steps | 06/27/2026 | 06/27/2026 | https://cloudjourney.awsstudygroup.com/ |
 
 ### Week 4 Achievements:
 
-* Understood the role of SageMaker in the ML lifecycle (build, train, deploy).
-
-* Deployed and queried a model from a SageMaker notebook instance.
-
-* Understood how text embeddings represent semantic meaning and how cosine similarity is used to compare them.
-
-* Computed embeddings and similarity scores for a small text sample as a warm-up for retrieval.
-
-* Explored the structure of the HotpotQA dataset and identified what "multi-hop" means in practice.
+* IAM Users, Groups and Roles created with principle of least privilege applied.
+* Customer Managed Key (CMK) created successfully; S3 data encrypted and decrypted.
+* CloudTrail recorded all API actions and stored logs in a backup bucket.
+* GuardDuty enabled, sample findings detected and remediation steps practiced.

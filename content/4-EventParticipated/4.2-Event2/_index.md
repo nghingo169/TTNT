@@ -1,56 +1,66 @@
 ---
-title: "Event 2"
-date: 2024-01-01
-weight: 1
+title: "AWS Cloud Competition - Final Round"
+date: 2026-07-11
+weight: 2
 chapter: false
 pre: " <b> 4.2. </b> "
+includeInReport: true
 ---
+# Summary Report: AWS Cloud Competition - Final Round
 
+On **11/07/2026**, I had the opportunity to attend the **final round** of the **AWS Cloud Competition** organized by **Amazon Web Services (AWS)** as an audience member. After the qualifying round on 20/06/2026, the strongest teams advanced to this final round, where they competed against each other by answering multiple-choice questions about cloud computing topics.
 
-# Summary Report: AI Agent Build Week
+### Event Format
 
-### Event Information
+- Organized by AWS, with participation from the top teams that advanced from the qualifying round
+- The final round was even more intense, with teams competing in multiple rounds of **multiple-choice questions** on cloud-related topics
+- Covered a wide range of cloud concepts: AWS core services, cloud architecture, security, pricing models, and best practices
 
-&emsp; **Event Name:** AI Agent Build Week
+### Key Highlights
 
-&emsp; **Date & Time:** July 25, 2026
+#### The final showdown
+- The atmosphere was more exciting and tense than the qualifying round, as the best teams battled for the championship
+- The difficulty level of the questions was noticeably higher, testing not just knowledge but also speed and composure
+- The live scoreboard kept changing as teams caught up and overtook each other, making the event thrilling until the very end
 
-&emsp; **Location:** 26th Floor, Bitexco Tower, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City
+#### Advanced questions and deeper topics
+- **AWS core services**: EC2, S3, RDS, Lambda, and more advanced service configurations
+- **Cloud architecture**: Well-Architected Framework, scalability, high availability, disaster recovery
+- **Security**: IAM, encryption, shared responsibility model, advanced security best practices
+- **Pricing & cost optimization**: savings plans, cost management tools, and complex pricing scenarios
 
-&emsp; **Role:** Attendee
+#### Champion performance
+- The winning team demonstrated outstanding knowledge, composure under pressure, and excellent teamwork
+- Watching the teams' final answers and the announcement of the champion was a memorable moment
+- The event concluded with an award ceremony celebrating the achievements of all participating teams
 
-### Event Content
+### Key Takeaways
 
-Attended the "AI Agent Build Week" workshop organized by FCAJ. During the event, teams that had competed in the hackathon came to share how they built their projects — from ideation, design, and deployment, to the challenges they faced along the way. The teams also shared how they used AWS services to solve problems within their projects.
+- The final round showed me the **highest level of cloud knowledge** expected from top-tier cloud practitioners.
+- The advanced questions inspired me to **push my own learning further** in areas such as security, pricing, and advanced AWS architectures.
+- Watching the champion team reinforced the importance of **teamwork, careful preparation, and staying calm under pressure**.
+- Comparing the final round to the qualifying round gave me a clear view of the **learning journey** required to go from a solid foundation to an expert level.
 
-### Favorite Projects
+### Event Photos
 
-- **KFC conversational ordering:** A chatbot project that lets customers place orders at KFC through conversation.
-- **Anti-money laundering system:** A system that helps banks and financial institutions detect and prevent money laundering activities.
+![Event 2 - Photo 1](/images/4-EventsParticipated/event2-1.png)
 
-### What I Learned
+![Event 2 - Photo 2](/images/4-EventsParticipated/event2-2.png)
 
-- End-to-End AI Agent Development Pipeline: Gained a comprehensive understanding of the complete lifecycle of AI-driven products, spanning from initial problem identification and architectural design to cloud deployment and continuous monitoring.
+### Event Experience as an Audience Member
 
-- Practical Cloud & AI Integration: Learned how top-performing teams effectively leverage AWS cloud infrastructure to handle data processing, model hosting, and real-time execution required for intelligent AI agents.
+Attending the final round of the AWS Cloud Competition as an audience member was the perfect conclusion to the competition journey:
 
-- Overcoming Engineering Trade-offs: Absorbed valuable insights into managing real-world constraints such as API latency, system scalability, security protocols, and cost management when deploying complex AI solutions.
+#### Witnessing the highest level of competition
+- The questions were harder and the pace was faster than the qualifying round, which made following along an exciting challenge.
+- I was able to measure how much my own knowledge had grown since the qualifying round by tracking how many questions I could answer.
 
-- Product-Oriented Mindset: Realized the importance of aligning advanced technical architecture with actual business logic and target user experiences, ensuring that technical innovations translate directly into core user value.
+#### A complete learning arc
+- Going from the qualifying round on 20/06 to the final round on 11/07 gave me a complete picture of the competition structure.
+- The experience motivated me to keep studying so that one day I could participate in such a competition myself, not just as a spectator.
 
-### Experience & Photos
+#### Celebration and inspiration
+- The award ceremony was inspiring, showing how far dedication and teamwork can take a group of people.
+- The competitive yet supportive atmosphere made the entire event memorable and motivating.
 
-- Event Atmosphere & Community Spirit: The workshop offered an exceptionally engaging environment where passion for technology was evident throughout every presentation. Observing the hackathon teams recount their journeys fostered an inspiring space for technical exchange and professional networking.
-
-- Personal Takeaways: Hearing first-hand accounts of the technical hurdles and design choices behind successful projects provided a highly pragmatic perspective that textbook learning often lacks. It was especially rewarding to see how abstract concepts in AI and cloud architecture were applied to solve tangible domain-specific problems.
-
-- Overall Reflection: Attending this event proved to be an invaluable experience, broadening my technical horizons and greatly motivating me to explore advanced AI agent frameworks and cloud integration paradigms in upcoming projects.
-
-![KFC Order Liveboard demo](/images/4-EventsParticipated/event2_1.png)
-*A team demoing the "KFC Order Liveboard" — tracking orders and AI agent activity in real time.*
-
-![AABW - Adaptive AML/KYT Workflow Engine architecture](/images/4-EventsParticipated/event2_2.png)
-*The "AABW - Adaptive AML/KYT Workflow Engine" architecture for detecting and handling suspicious transactions.*
-
-![At the AI Agent Build Week event](/images/4-EventsParticipated/event2_3.png)
-*A moment from attending the AI Agent Build Week event.*
+> Overall, attending the final round of the AWS Cloud Competition as a spectator was an exciting and rewarding experience. It completed my journey through the competition, deepened my understanding of advanced cloud topics, and inspired me to continue growing as a cloud developer.

@@ -1,30 +1,29 @@
 ---
-title: "Các events đã tham gia"
+title: "Các events đã đến xem"
 date: 2024-01-01
 weight: 4
 chapter: false
 pre: " <b> 4. </b> "
+includeInReport: false
 ---
 
-Trong quá trình thực tập, em đã tham gia 2 events, với mỗi event là một trải nghiệm đáng nhớ với những kiến thức mới, hay và bổ ích, cùng với đó là nhứng món quà và những khoảnh khắc rất tuyệt vời.
+Trong quá trình thực tập, em đã đến xem 2 events với vai trò khán giả, mỗi event là một trải nghiệm đáng nhớ với những kiến thức mới, hay và bổ ích, cùng với đó là những món quà và những khoảnh khắc rất tuyệt vời.
 
 ### [Event 1](4.1-Event1/)
-&emsp;**Tên sự kiện:** AWS Cloud Competition - Qualifying Round
+&emsp;**Tên sự kiện:** Cuộc thi Cloud Competition của AWS - Vòng loại
 
-&emsp;**Thời gian:** 20/06/2026
+&emsp;**Thời gian:** Ngày 20/06/2026
 
-&emsp;**Địa điểm:** Tầng 26, Tòa nhà Bitexco, 02 Hải Triều, Phường Bến Nghé, Quận 1, TP. Hồ Chí Minh
+&emsp;**Địa điểm:** Thành phố Hồ Chí Minh, Việt Nam
 
-&emsp;**Vai trò trong sự kiện:** Người tham dự 
-
-
+&emsp;**Vai trò trong sự kiện:** Khán giả (người đến xem)
 
 ### [Event 2](4.2-Event2/)
-&emsp;**Tên sự kiện:** AI Agent Build Week
+&emsp;**Tên sự kiện:** Cuộc thi Cloud Competition của AWS - Vòng chung kết
 
-&emsp;**Thời gian:** 25/07/2026
+&emsp;**Thời gian:** Ngày 11/07/2026
 
-&emsp;**Địa điểm:** Tầng 26, Tòa nhà Bitexco, 02 Hải Triều, Phường Bến Nghé, Quận 1, TP. Hồ Chí Minh
+&emsp;**Địa điểm:** Thành phố Hồ Chí Minh, Việt Nam
 
-&emsp;**Vai trò trong sự kiện:** Người tham dự 
+&emsp;**Vai trò trong sự kiện:** Khán giả (người đến xem)
 

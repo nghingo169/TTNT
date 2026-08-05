@@ -1,36 +1,35 @@
 ---
 title: "Worklog Tuần 5"
-date: 2024-01-01
-weight: 1
+date: 2026-07-08
+weight: 5
 chapter: false
 pre: " <b> 1.5. </b> "
+reportTableColumns:
+  - Thứ
+  - Công việc
+  - Ngày hoàn thành
+reportType: worklog
 ---
 
+### Tuần 5 Mục tiêu:
 
-### Mục tiêu tuần 5:
+* Bắt đầu triển khai phần core của dự án RAG **aws‑rag‑project**.
+* Xây dựng corpus mẫu (HotpotQA – 100 validation rows) và tải lên S3.
+* Tạo **offline artifact bundle** (ChromaDB, BM25, manifest) cho index `index-demo-small-v001` và đưa lên S3 theo layout chuẩn.
 
-* Hiểu Retrieval-Augmented Generation (RAG) là gì và vì sao nó giúp giảm hallucination.
-* Xây dựng một pipeline RAG đơn giản (naive, một lượt): chunk → embed → retrieve → generate.
-* Chạy pipeline naive trên một mẫu câu hỏi HotpotQA và đo độ chính xác baseline.
+### Các công việc trong tuần:
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc | Ngày |
-| --- | --- | --- |
-| 4 | - Tìm hiểu nền tảng RAG: retrieval + generation, cách "ground" câu trả lời của LLM vào context đã truy xuất | 08/07/2026 |
-| 5 | - Tìm hiểu pipeline naive RAG: <br>&emsp; + Chiến lược chunking tài liệu <br>&emsp; + Embed corpus <br>&emsp; + Lưu vector <br>&emsp; + Top-k similarity search | 09/07/2026 |
-| 6 | - **Thực hành:** chunk và embed một tập nhỏ đoạn context của HotpotQA, lưu embeddings vào vector index | 10/07/2026 |
-| 2 | - **Thực hành:** cài đặt retrieval một lượt + dựng prompt, sinh câu trả lời cho các câu hỏi mẫu | 13/07/2026 |
-| 3 | - Đánh giá pipeline naive RAG trên một mẫu nhỏ HotpotQA (Exact Match / F1) và ghi nhận các trường hợp lỗi với câu hỏi đa bước | 14/07/2026 |
+| Ngày | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | ------------ | --------------- | ------------------- |
+| 1 | Chạy notebook `backend/notebooks/build_s3_offline_artifacts.ipynb` để tạo corpus và xuất `corpus.jsonl`, `eval.jsonl`, `corpus_manifest.json` | 07/01/2026 | 07/01/2026 | aws-rag-project/docs/STEP_1_BUILD_CORPUS_S3.md |
+| 2 | Upload các file corpus lên bucket S3 `s3://aws-rag-bucket-vanh1234/rag/corpora/hotpotqa/validation-100/v001/` bằng `aws s3 cp` | 07/02/2026 | 07/02/2026 | aws-rag-project/docs/STEP_1_BUILD_CORPUS_S3.md |
+| 3 | Chạy script `backend/scripts/build_offline_artifacts.py` với tham số `--index-id index-demo-small-v001` để tạo offline artifact bundle | 07/03/2026 | 07/03/2026 | aws-rag-project/docs/STEP_2_OFFLINE_ARTIFACTS.md |
+| 4 | Kiểm tra các prefix S3 (`processed/`, `vector-db/chroma/`, `bm25/`, `manifests/`) chứa artefact đã upload | 07/04/2026 | 07/04/2026 | aws-rag-project/docs/STEP_2_OFFLINE_ARTIFACTS.md |
+| 5 | Ghi lại các vấn đề gặp phải (quota SageMaker, model `BAAI/bge-m3` bị kill, dependency thiếu) và cách khắc phục bằng model nhẹ `BAAI/bge-small-en-v1.5` | 07/05/2026 | 07/05/2026 | aws-rag-project/docs/STEP_2_OFFLINE_ARTIFACTS.md |
 
+### Thành tựu tuần 5:
 
-### Kết quả đạt được tuần 5:
-
-* Hiểu ý tưởng cốt lõi của RAG và vì sao việc "ground" câu trả lời vào bằng chứng đã truy xuất giúp giảm hallucination.
-
-* Xây dựng được một pipeline naive RAG hoạt động: chunking, embedding, vector similarity search, và sinh câu trả lời dựa trên prompt.
-
-* Chạy pipeline end-to-end trên một mẫu câu hỏi HotpotQA.
-
-* Đo được độ chính xác baseline (EM/F1) và nhận thấy retrieval một lượt (naive) thường thất bại với các câu hỏi đa bước cần bằng chứng từ nhiều tài liệu.
-
-* Xác định đây chính là động lực để tìm hiểu các kỹ thuật RAG nâng cao trong tuần tới.
+* Corpus HotpotQA (100 rows) được tạo và lưu trữ thành công trên S3.
+* Offline artifact bundle `index-demo-small-v001` được tạo, bao gồm ChromaDB, BM25 và manifest, và đã được tải lên S3 theo layout chuẩn.
+* Toàn bộ artefact được xác thực tồn tại trên S3 và sẵn sàng cho pipeline online.
+* Các lỗi liên quan tới quota và model đã được ghi nhận và giải quyết bằng việc chuyển sang model nhẹ.

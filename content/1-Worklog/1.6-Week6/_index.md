@@ -1,36 +1,41 @@
 ---
 title: "Week 6 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-07-15
+weight: 6
 chapter: false
 pre: " <b> 1.6. </b> "
+includeInReport: true
+reportTableColumns:
+  - Day
+  - Task
+  - Completion Date
+reportHeadings:
+  - Week 6 Objectives
+  - Tasks to be carried out this week
+  - Week 6 Achievements
+reportType: worklog
 ---
-
 
 ### Week 6 Objectives:
 
-* Understand the limitations of naive RAG on multi-hop questions.
-* Learn and apply advanced RAG techniques: query decomposition, iterative/multi-hop retrieval, and re-ranking.
-* Improve retrieval quality and answer accuracy on HotpotQA compared to the Week 5 baseline.
+* Deploy online pipeline on SageMaker and EC2, loading pre-built artifacts without re-running chunking or embedding.
+* Run sample queries and measure response times.
+* Prepare EC2 environment for running FastAPI service.
 
 ### Tasks to be carried out this week:
-| Day | Task | Date |
-| --- | --- | --- |
-| 4 | - Learn advanced RAG techniques: <br>&emsp; + Query rewriting / decomposition <br>&emsp; + Iterative retrieval <br>&emsp; + Re-ranking <br>&emsp; + Hybrid (keyword + vector) search | 07/15/2026 |
-| 5 | - **Practice:** implement query decomposition to break a multi-hop question into sub-questions | 07/16/2026 |
-| 6 | - **Practice:** implement an iterative/multi-hop retrieval loop that uses the answer to one sub-question to retrieve evidence for the next | 07/17/2026 |
-| 2 | - **Practice:** add a re-ranking step on top of retrieved passages to improve context relevance before generation | 07/20/2026 |
-| 3 | - Re-evaluate the advanced RAG pipeline on the same HotpotQA sample used in Week 5 and compare EM/F1 against the naive baseline | 07/21/2026 |
 
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | ---- | ---------- | --------------- | ------------------ |
+| 1 | - Read **STEP 4 – Online Pipeline Load Existing Artifacts** documentation | 07/06/2026 | 07/06/2026 | aws-rag-project/docs/STEP_4_ONLINE_LOAD_ARTIFACTS.md |
+| 2 | - Run script `backend/scripts/check_online_artifacts.py` to verify artifacts are loaded successfully in SageMaker environment | 07/07/2026 | 07/07/2026 | aws-rag-project/docs/STEP_4_ONLINE_LOAD_ARTIFACTS.md |
+| 3 | - Execute sample query via `backend/tools/query.py --index-id index-demo-small-v001` <br> - Record artifact load time + query time (< 5 seconds) | 07/08/2026 | 07/08/2026 | aws-rag-project/docs/STEP_4_ONLINE_LOAD_ARTIFACTS.md |
+| 4 | - Create EC2 instance (Ubuntu) <br> - Attach IAM role for S3, SSM and Secrets Manager access | 07/09/2026 | 07/09/2026 | aws-rag-project/docs/STEP_6_EC2_FASTAPI_DEPLOYMENT.md |
+| 5 | - Clone `aws-rag-project` repo onto EC2 <br> - Install dependencies <br> - Create `.env.prod` with environment variables (`RAG_INDEX_ID`, `S3_ARTIFACT_BUCKET`, …) | 07/10/2026 | 07/10/2026 | aws-rag-project/docs/STEP_6_EC2_FASTAPI_DEPLOYMENT.md |
+| 6 | - Deploy FastAPI via systemd (`aws-rag-api.service`) <br> - Start service and test `/health` and `/query` endpoints locally | 07/11/2026 | 07/11/2026 | aws-rag-project/docs/STEP_6_EC2_FASTAPI_DEPLOYMENT.md |
 
 ### Week 6 Achievements:
 
-* Understood why naive RAG struggles with multi-hop questions and how advanced retrieval strategies address that gap.
-
-* Implemented query decomposition to break multi-hop questions into retrievable sub-questions.
-
-* Built an iterative, multi-hop retrieval loop that chains evidence across documents.
-
-* Added a re-ranking step that improved the relevance of retrieved context.
-
-* Measured a clear accuracy improvement (EM/F1) over the Week 5 naive RAG baseline on HotpotQA.
+* Online pipeline on SageMaker loaded artifacts successfully, skipping chunking/embedding step and reducing startup time.
+* Sample query returned results within < 5 seconds, proving pre-loaded artifact performance.
+* EC2 instance provisioned with proper IAM role; FastAPI service running under systemd and returning valid responses via `/query` endpoint.
+* All necessary environment variables configured, ready for the next steps.

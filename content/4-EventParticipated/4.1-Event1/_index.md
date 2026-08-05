@@ -1,45 +1,67 @@
 ---
-title: "Event 1"
-date: 2024-01-01
+title: "AWS Cloud Competition - Qualifying Round"
+date: 2026-06-20
 weight: 1
 chapter: false
 pre: " <b> 4.1. </b> "
+includeInReport: true
 ---
-
-
 # Summary Report: AWS Cloud Competition - Qualifying Round
 
-### Event Information
+On **20/06/2026**, I had the opportunity to attend the **qualifying round** of the **AWS Cloud Competition** organized by **Amazon Web Services (AWS)** as an audience member. The event brought together multiple teams competing against each other by answering multiple-choice questions about cloud computing topics.
 
-&emsp; **Event Name:** AWS Cloud Competition - Qualifying Round
+### Event Format
 
-&emsp; **Date & Time:** June 20, 2026
+- Organized by AWS, with participation from multiple teams
+- Teams competed in rounds answering **multiple-choice questions** on cloud-related topics
+- Covered a wide range of cloud concepts: AWS core services, cloud architecture, security, pricing models, and best practices
 
-&emsp; **Location:** 26th Floor, Bitexco Tower, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City
+### Key Highlights
 
-&emsp; **Role:** Attendee
+#### Knowledge competition format
+- Teams answered a series of multiple-choice questions covering both fundamental and advanced cloud topics
+- The quiz-style format encouraged quick thinking and teamwork under time pressure
+- Live scoring kept the atmosphere exciting and competitive throughout the event
 
-### Event Content
+#### Diverse cloud topics covered
+- **AWS core services**: EC2, S3, RDS, Lambda, and other fundamental services
+- **Cloud architecture**: Well-Architected Framework, scalability, high availability
+- **Security**: IAM, encryption, shared responsibility model
+- **Pricing & cost optimization**: Free Tier, savings plans, cost management tools
 
-Attended a workshop organized by FCAJ (First Cloud AI Journey). During the event, teams competed against each other by answering questions posed by the organizers, covering a variety of AWS services.
+#### Inspiring team performances
+- Watching teams collaborate, discuss, and answer questions under time pressure was impressive
+- The competition highlighted the importance of teamwork, quick decision-making, and solid cloud knowledge
+- Top teams demonstrated deep understanding of AWS services and best practices
 
-### What I Learned
+### Key Takeaways
 
-- Expansion of Cloud Ecosystem Knowledge: Gained a comprehensive overview of the Amazon Web Services (AWS) ecosystem, recognizing the practical application potential and critical role of key service categories in optimizing technical infrastructure.
+- The competition gave me a clear picture of the **breadth of cloud knowledge** expected in the industry, from core services to security and cost optimization.
+- I was inspired to **deepen my own understanding** of AWS services and cloud architecture beyond what I had learned in my internship project.
+- Observing teams under pressure reinforced the value of **collaboration and communication** in solving technical problems quickly and accurately.
+- The quiz format was an effective way to **self-assess** my own knowledge gaps in areas such as security, pricing, and some advanced services.
 
-- Deployment Mindset & System Architecture: Grasped fundamental principles behind configuring and connecting core AWS services to build robust, scalable, and highly available software architecture.
+### Event Experience as an Audience Member
 
-- Analytical & Problem-Solving Skills: Refined quick-thinking and problem-localization skills through interactive and challenging scenario-based questions, learning how to select appropriate cloud services under real-world constraints.
+Attending the qualifying round of the AWS Cloud Competition as an audience member was an engaging and motivating experience:
 
-- Awareness of Tech Industry Trends: Attained a clearer perspective on the broader cloud computing landscape in the digital era, helping to identify relevant learning pathways and professional skills for future development.
+#### Observing real-time problem-solving
+- Watching teams reason through questions and make quick decisions showed me how technical knowledge is applied under pressure.
+- I could follow along and answer many of the questions myself, which was a great way to test and reinforce my own cloud knowledge.
 
-### Experience & Photos
+#### Learning beyond my internship project
+- The competition covered topics beyond the scope of my daily work, such as detailed pricing models, security best practices, and a broader set of AWS services.
+- This helped me identify areas where I should continue learning to become a more well-rounded cloud practitioner.
 
-- Event Atmosphere & Interaction: The workshop delivered a highly vibrant, inspiring, and collaborative learning environment. The gamified team-based Q&A structure transformed the session from passive listening into an engaging, interactive experience that fostered team spirit and networking.
+#### Inspiration and motivation
+- Seeing the level of knowledge and teamwork demonstrated by the competing teams motivated me to keep improving my cloud skills.
+- The competitive yet supportive atmosphere made learning fun and memorable.
+- After the qualifying round, the strongest teams advanced to the final round, and I was excited to follow the competition to its conclusion.
 
-- Personal Reflections: Engaging in real-time discussions and exploring technical scenarios made complex concepts far more intuitive and memorable. The event provided a great balance of reinforcing foundational knowledge while introducing fresh angles on leveraging cloud technology for real-world software solutions.
+### Event Photos
 
-- Overall Takeaway: It was a thoroughly rewarding learning experience that greatly boosted my motivation to dive deeper into cloud architecture and pursue further technical competencies in AWS.
+![Event 1 - Photo 1](/images/4-EventsParticipated/Event1-1.png)
 
-![Team-based Q&A round at the AWS Cloud Competition - Qualifying Round](/images/4-EventsParticipated/event1.png)
-*A team answering a scenario question on Amazon S3 access control during the gamified Q&A round.*
+![Event 1 - Photo 2](/images/4-EventsParticipated/event1-2.png)
+
+> Overall, attending the qualifying round of the AWS Cloud Competition as a spectator was both enjoyable and educational. It reinforced my existing knowledge, revealed areas for improvement, and inspired me to continue growing as a cloud developer.

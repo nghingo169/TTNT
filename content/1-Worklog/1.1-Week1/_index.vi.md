@@ -1,47 +1,35 @@
 ---
 title: "Worklog Tuần 1"
-date: 2024-01-01
+date: 2026-06-10
 weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
+reportTableColumns:
+  - Thứ
+  - Công việc
+  - Ngày hoàn thành
+reportType: worklog
 ---
 
+### Tuần 1 Mục tiêu:
 
-### Mục tiêu tuần 1:
+* Hiểu khái quát chương trình thực tập First Cloud AI Journey.
+* Làm quen với các dịch vụ nền tảng AWS: Console, CLI, IAM, S3, EC2, CloudWatch.
+* Nắm bắt khái niệm Retrieval‑Augmented Generation (RAG) và mục tiêu dự án **aws‑rag‑project**.
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
-* Thực hành với các kiến thức nền tảng của EC2.
+### Các công việc trong tuần:
+| Ngày | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| ---- | --------- | ------------ | --------------- | ------------------- |
+| 1 | - Tham dự buổi onboarding, gặp gỡ Mentor và các thành viên FCAJ | 06/10/2026 | 06/10/2026 | https://cloudjourney.awsstudygroup.com/ |
+| 2 | - Tạo tài khoản AWS Free Tier, cài đặt và cấu hình AWS CLI | 06/11/2026 | 06/11/2026 | https://cloudjourney.awsstudygroup.com/ |
+| 3 | - Khám phá AWS Console: tạo IAM user, bật Multi‑Factor Authentication, tạo bucket S3 mẫu | 06/12/2026 | 06/12/2026 | https://cloudjourney.awsstudygroup.com/ |
+| 4 | - Đọc tài liệu dự án **aws‑rag‑project** (README, docs) để nắm kiến trúc tổng quan | 06/13/2026 | 06/13/2026 | https://github.com/awslabs/aws-rag-project |
+| 5 | - Thử chạy một container FastAPI đơn giản trên máy local để hiểu cách backend được đóng gói | 06/14/2026 | 06/14/2026 | https://cloudjourney.awsstudygroup.com/ |
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc | Ngày |
-| --- | --- | --- |
-| 2 | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập <br> - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br> - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI <br> - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... | 15/06/2026 |
-| 3 | - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP <br> - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume | 16/06/2026 |
+### Thành tựu tuần 1:
 
-
-### Kết quả đạt được tuần 1:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản:
-  * Compute
-  * Storage
-  * Networking
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Nắm kiến thức nền tảng của EC2 (instance types, AMI, EBS) và thực hành:
-  * Tạo EC2 instance
-  * Kết nối SSH
-  * Gắn EBS volume
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
+* Tài khoản AWS và AWS CLI đã được cấu hình thành công.
+* IAM user với MFA và bucket S3 mẫu đã được tạo, upload/download qua CLI.
+* Hiểu được quy trình onboarding và vai trò của FCAJ.
+* Nắm được các dịch vụ nền tảng AWS và khái niệm RAG.
+* Đọc và phân tích cấu trúc dự án **aws‑rag‑project**, xác định vị trí các thành phần backend, frontend và scripts.

@@ -1,45 +1,67 @@
 ---
-title: "Event 1"
-date: 2024-01-01
+title: "Cuộc thi Cloud Competition của AWS - Vòng loại"
+date: 2026-06-20
 weight: 1
 chapter: false
 pre: " <b> 4.1. </b> "
+includeInReport: true
 ---
+# Bài thu hoạch: Cuộc thi Cloud Competition của AWS - Vòng loại
 
+Vào ngày **20/06/2026**, tôi đã có cơ hội đến xem với vai trò **khán giả** tại **vòng loại** của cuộc thi **AWS Cloud Competition** do **Amazon Web Services (AWS)** tổ chức. Sự kiện quy tụ nhiều đội thi đối đầu với nhau bằng cách trả lời các câu hỏi trắc nghiệm về chủ đề cloud computing. Tôi chỉ đến với tư cách người xem, không phải là người tham gia thi đấu.
 
-# Bài thu hoạch: AWS Cloud Competition - Qualifying Round
+### Thể thức cuộc thi
 
-### Thông tin sự kiện
+- Được tổ chức bởi AWS, với sự tham gia của nhiều đội thi
+- Các đội thi đấu qua nhiều vòng trả lời **câu hỏi trắc nghiệm** về các chủ đề cloud
+- Bao phủ nhiều khái niệm cloud: dịch vụ AWS cốt lõi, kiến trúc cloud, bảo mật, mô hình giá và best practices
 
-&emsp; **Tên sự kiện:** AWS Cloud Competition - Qualifying Round
+### Nội Dung Nổi Bật
 
-&emsp; **Thời gian:** 20/06/2026
+#### Thể thức thi kiến thức
+- Các đội trả lời chuỗi câu hỏi trắc nghiệm bao gồm cả chủ đề cloud cơ bản lẫn nâng cao
+- Thể thức đố vui khuyến khích tư duy nhanh và làm việc nhóm dưới áp lực thời gian
+- Bảng điểm trực tiếp giúp bầu không khí trở nên sôi động và cạnh tranh trong suốt sự kiện
 
-&emsp; **Địa điểm:** Tầng 26, Tòa nhà Bitexco, 02 Hải Triều, Phường Bến Nghé, Quận 1, TP. Hồ Chí Minh
+#### Nhiều chủ đề cloud đa dạng
+- **Dịch vụ AWS cốt lõi**: EC2, S3, RDS, Lambda và các dịch vụ nền tảng khác
+- **Kiến trúc cloud**: Well-Architected Framework, khả năng mở rộng, tính sẵn sàng cao
+- **Bảo mật**: IAM, mã hóa, mô hình trách nhiệm chung (shared responsibility model)
+- **Giá cả và tối ưu chi phí**: Free Tier, savings plans, công cụ quản lý chi phí
 
-&emsp; **Vai trò:** Người tham dự
+#### Màn trình diễn đầy cảm hứng của các đội thi
+- Chứng kiến các đội phối hợp, thảo luận và trả lời câu hỏi dưới áp lực thời gian rất ấn tượng
+- Cuộc thi làm nổi bật tầm quan trọng của tinh thần đồng đội, ra quyết định nhanh và kiến thức cloud vững chắc
+- Các đội dẫn đầu thể hiện sự hiểu biết sâu sắc về dịch vụ AWS và best practices
 
-### Nội dung sự kiện
+### Những Gì Học Được
 
-Tham gia workshop do FCAJ (First Cloud AI Journey) tổ chức. Trong sự kiện, các đội thi đấu với nhau bằng cách trả lời những câu hỏi do ban tổ chức đưa ra, xoay quanh nhiều dịch vụ AWS khác nhau.
+- Cuộc thi cho tôi thấy rõ **bề rộng kiến thức cloud** mà ngành công nghiệp kỳ vọng, từ dịch vụ cốt lõi đến bảo mật và tối ưu chi phí.
+- Tôi được truyền cảm hứng để **đào sâu hiểu biết của bản thân** về dịch vụ AWS và kiến trúc cloud vượt ra ngoài những gì đã học trong dự án thực tập.
+- Quan sát các đội thi dưới áp lực củng cố giá trị của **hợp tác và giao tiếp** trong việc giải quyết vấn đề kỹ thuật một cách nhanh chóng và chính xác.
+- Thể thức đố vui là một cách hiệu quả để **tự đánh giá** những khoảng trống kiến thức của bản thân trong các lĩnh vực như bảo mật, giá cả và một số dịch vụ nâng cao.
 
-### Những gì học được
+### Trải nghiệm với vai trò khán giả
 
-- Mở rộng hệ sinh thái công nghệ Cloud: Tiếp thu kiến thức tổng quan về hệ sinh thái dịch vụ đám mây của Amazon Web Services (AWS), nhận diện được vai trò và tiềm năng ứng dụng thực tế của từng nhóm dịch vụ chính trong việc tối ưu hóa hạ tầng kĩ thuật.
+Theo dõi vòng loại cuộc thi AWS Cloud Competition với tư cách khán giả là một trải nghiệm thú vị và tạo động lực:
 
-- Tư duy triển khai và kiến trúc hệ thống: Nắm bắt được nguyên lý cơ bản trong việc cấu hình và kết nối các dịch vụ AWS với nhau nhằm phục vụ việc xây dựng giải pháp phần mềm bài bản, có khả năng mở rộng (scalability) và đảm bảo tính sẵn sàng cao.
+#### Quan sát giải quyết vấn đề trực tiếp
+- Chứng kiến các đội suy luận qua từng câu hỏi và đưa ra quyết định nhanh chóng cho thấy kiến thức kỹ thuật được áp dụng dưới áp lực như thế nào.
+- Tôi có thể theo dõi và tự trả lời nhiều câu hỏi, đây là cách tuyệt vời để kiểm tra và củng cố kiến thức cloud của bản thân.
 
-- Kỹ năng phân tích & giải quyết vấn đề: Thông qua định dạng câu hỏi tương tác mang tính thử thách, bản thân rèn luyện được tư duy phản xạ nhanh, khả năng định vị bài toán và lựa chọn công cụ/dịch vụ tiệm cận nhất với yêu cầu thực tế.
+#### Học hỏi vượt ra ngoài dự án thực tập
+- Cuộc thi bao phủ những chủ đề ngoài phạm vi công việc hằng ngày, chẳng hạn như mô hình giá chi tiết, best practices bảo mật và nhiều dịch vụ AWS hơn.
+- Điều này giúp tôi xác định những lĩnh vực cần tiếp tục học hỏi để trở thành một người làm cloud toàn diện hơn.
 
-- Tầm nhìn về xu hướng công nghệ: Nhận thức rõ ràng hơn về bức tranh toàn cảnh của điện toán đám mây trong kỷ nguyên số, từ đó xác định được những định hướng học tập và trau dồi kĩ năng chuyên môn phù hợp cho bản thân trong tương lai.
+#### Cảm hứng và động lực
+- Nhìn thấy trình độ kiến thức và tinh thần đồng đội của các đội thi thúc đẩy tôi không ngừng nâng cao kỹ năng cloud của mình.
+- Bầu không khí cạnh tranh nhưng hỗ trợ lẫn nhau khiến việc học trở nên thú vị và đáng nhớ.
+- Sau vòng loại, những đội mạnh nhất đã tiến vào vòng chung kết, và tôi rất háo hức theo dõi cuộc thi đến phút cuối cùng.
 
-### Trải nghiệm và hình ảnh
+### Hình ảnh sự kiện
 
-- Không khí sự kiện & Tương tác: Sự kiện mang lại một không gian học tập vô cùng sôi nổi và truyền cảm hứng. Hình thức thi đấu trả lời câu hỏi theo đội nhóm giúp buổi workshop không bị gò bó theo lối truyền tải một chiều, ngược lại thúc đẩy sự chủ động, hào hứng và tinh thần kết nối giữa các thành viên tham dự.
+![Event 1 - Ảnh 1](/images/4-EventsParticipated/Event1-1.png)
 
-- Ấn tượng cá nhân: Việc được trực tiếp tham gia thảo luận và tiếp cận kiến thức dưới dạng các tình huống thực tế đã giúp tôi tiếp thu thông tin một cách tự nhiên và dễ nhớ hơn rất nhiều. Buổi workshop không chỉ củng cố lại các nền tảng lý thuyết đã biết mà còn mở ra những góc nhìn mới mẻ về cách ứng dụng công nghệ vào thực tiễn kinh doanh và phát triển phần mềm.
+![Event 1 - Ảnh 2](/images/4-EventsParticipated/event1-2.png)
 
-- Đánh giá chung: Đây là một trải nghiệm học tập đầy giá trị, mang lại động lực lớn để tôi tiếp tục tìm hiểu sâu hơn về kiến trúc Cloud cũng như các chứng chỉ chuyên môn của AWS trong thời gian tới.
-
-![Vòng thi trả lời câu hỏi theo đội tại AWS Cloud Competition - Qualifying Round](/images/4-EventsParticipated/event1.png)
-*Một đội đang trả lời câu hỏi tình huống về quyền truy cập Amazon S3 trong vòng thi trả lời câu hỏi theo đội.*
+> Tổng thể, việc tham dự vòng loại cuộc thi AWS Cloud Competition với vai trò khán giả vừa thú vị vừa bổ ích. Nó củng cố kiến thức hiện có, phơi bày những lĩnh vực cần cải thiện và truyền cảm hứng để tôi tiếp tục phát triển với tư cách một nhà phát triển cloud.
