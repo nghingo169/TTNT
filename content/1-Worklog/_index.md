@@ -4,7 +4,7 @@ date: 2024-01-01
 weight: 1
 chapter: false
 pre: " <b> 1. </b> "
-includeInReport: false
+includeInReport: true
 ---
 **On this page** you will find an overview of the weekly worklog entries for the internship. Each week details the objectives, tasks, and achievements carried out during the program.
 

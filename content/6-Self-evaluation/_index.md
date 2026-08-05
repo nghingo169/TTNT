@@ -4,7 +4,7 @@ date: 2026-07-30
 weight: 6
 chapter: false
 pre: " <b> 6. </b> "
-includeInReport: false
+includeInReport: true
 ---
 
 During my internship at **First Cloud AI Journey (FCAJ) program** from **10/06/2026** to **30/07/2026**, I had the opportunity to learn, practice, and apply the knowledge acquired in school to a real-world working environment.  

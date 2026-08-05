@@ -4,7 +4,7 @@ date: 2024-01-01
 weight: 4
 chapter: false
 pre: " <b> 4. </b> "
-includeInReport: false
+includeInReport: true
 ---
 
 During my internship, I attended two events as an audience member. Each one was a memorable experience that provided new, interesting, and useful knowledge, along with gifts and wonderful moments.
