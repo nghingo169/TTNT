@@ -30,8 +30,8 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-          publish_branch: gh-pages # <- đảm bảo đúng tên nhánh bạn dùng để deploy
-          force_orphan: true # <- đảm bảo xóa lịch sử cũ ở nhánh gh-pages (giảm lỗi)
+          publish_branch: gh-pages
+          force_orphan: true
 
   build-pdf:
     runs-on: ubuntu-latest
@@ -62,13 +62,16 @@ jobs:
       - name: Convert Hugo content to LaTeX
         run: python3 scripts/convert_hugo_to_latex.py
 
-      - name: Compile English PDF
+      - name: Compile LaTeX PDFs
         working-directory: report
         run: |
-          latexmk -pdf -interaction=nonstopmode main_en.tex
-          latexmk -pdf -interaction=nonstopmode main_en.tex
-          latexmk -pdf -interaction=nonstopmode main_en.tex
-          cp main_en.pdf ../report_en.pdf
+          # Biên dịch bản Tiếng Việt (nếu có)
+          latexmk -pdf -f -interaction=nonstopmode main.tex || true
+          [ -f main.pdf ] && cp main.pdf ../report_vn.pdf || true
+
+          # Biên dịch bản Tiếng Anh
+          latexmk -pdf -f -interaction=nonstopmode main_en.tex || true
+          [ -f main_en.pdf ] && cp main_en.pdf ../report_en.pdf || true
 
       - name: Package LaTeX source
         run: |
@@ -92,8 +95,9 @@ jobs:
             Automated PDF generation from Hugo content on push to `main`.
 
             - **English**: `report_en.pdf`
+            - **Vietnamese**: `report_vn.pdf`
             - **LaTeX source**: `latex_source.zip`
-          artifacts: "report_en.pdf,latex_source.zip"
+          artifacts: "report_en.pdf,report_vn.pdf,latex_source.zip"
           allowUpdates: true
           removeArtifacts: true
           makeLatest: true
