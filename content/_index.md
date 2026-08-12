@@ -13,7 +13,7 @@ chapter: false
 
 <br/>
 
-![HCMUT Logo](C:\Users\Admin\OneDrive\Tài liệu\tnghi hoc bai neee\HK252\TTNT\fcj-template\static\images\M2_Logo_BK.png)[cite: 3, 8]
+![HCMUT Logo](static\images\M2_Logo_BK.png)[cite: 3, 8]
 
 <br/>
 
