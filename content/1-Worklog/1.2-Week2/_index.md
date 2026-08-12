@@ -1,40 +1,83 @@
 ---
+
+## WEEK 2 WORKLOG (22/06/2026 - 26/06/2026)
+
+---
+
 title: "Week 2 Worklog"
-date: 2026-06-17
+date: 2026-02-26
 weight: 2
 chapter: false
-pre: " <b> 1.2. </b> "
+pre: "  1.2.  "
 includeInReport: true
 reportTableColumns:
-  - Day
-  - Task
-  - Completion Date
+
+* Day
+* Task
+* Completion Date
 reportHeadings:
-  - Week 2 Objectives
-  - Tasks to be carried out this week
-  - Week 2 Achievements
+* Week 2 Objectives
+* Tasks to be carried out this week
+* Week 2 Achievements
 reportType: worklog
+
 ---
 
 ### Week 2 Objectives:
 
-* Explore advanced AWS storage services: Amazon S3 (advanced features), EBS, and AWS Backup.
-* Practice managing bucket policies, versioning, Server‑Side Encryption, and lifecycle rules.
-* Create, attach, and snapshot an EBS volume, then restore it on EC2.
+* Complete Customer Understanding, User Journey mapping, and Personas for **Financial Wellbeing Assistant**.
+
+
+* Execute the SDVF (Suitability, Desirability, Viability, Feasibility) assessment and Design Principles evaluation.
+
+
+* Design wireframes/low-fidelity prototype in Figma and present the solution proposal at Sprint A Design Critique.
+
+
 
 ### Tasks to be carried out this week:
 
 | Day | Task | Start Date | Completion Date | Reference Material |
-| --- | ---- | ---------- | --------------- | ------------------ |
-| 1 | - Read S3 Advanced documentation <br> - Create an S3 bucket with versioning and SSE‑AES enabled | 06/13/2026 | 06/13/2026 | https://cloudjourney.awsstudygroup.com/ |
-| 2 | - Set up Lifecycle Policy to automatically transition objects to S3 Glacier after 30 days | 06/14/2026 | 06/14/2026 | https://cloudjourney.awsstudygroup.com/ |
-| 3 | - Launch EC2 instance (t3.micro) <br> - Create an EBS gp3 volume, attach to instance, and take a snapshot | 06/15/2026 | 06/15/2026 | https://cloudjourney.awsstudygroup.com/ |
-| 4 | - Restore snapshot to a new volume and mount it on EC2 to verify data | 06/16/2026 | 06/16/2026 | https://cloudjourney.awsstudygroup.com/ |
-| 5 | - Use AWS Backup to create a backup plan for EBS volume and test restore via Backup service | 06/17/2026 | 06/17/2026 | https://cloudjourney.awsstudygroup.com/ |
+| --- | --- | --- | --- | --- |
+| 1 | - Build Customer Personas & Empathy Maps: Retail Customer (Alex) and NAB Banker (Sarah) (Deliverable 4).
+
+ | 22/06/2026 | 22/06/2026 | `[TheHELLO]` Confluence
+
+ |
+| 2 | - Map Jobs-To-Be-Done (JTBD) framework and define core user journeys for financial insights.
+
+ | 23/06/2026 | 23/06/2026 | Confluence Deliverables
+
+ |
+| 3 | - Formulate product hypotheses and complete the SDVF Assessment (Deliverables 3 & 9).
+
+<br>
+
+<br>- Assess Responsible Design & Privacy constraints (Deliverable 10).
+
+ | 24/06/2026 | 24/06/2026 | SDVF Framework / Confluence
+
+ |
+| 4 | - Sketch Low-Fidelity Wireframes and draft Figma Prototype for cash flow alerts and savings flows (Deliverable 13).
+
+ | 25/06/2026 | 25/06/2026 | Figma / Wireframe Specs
+
+ |
+| 5 | - Present Assignment G1 proposal pitch deck to Product Owners during the 10-minute presentation & Design Critique.
+
+ | 26/06/2026 | 26/06/2026 | Sprint Ceremonies
+
+ |
 
 ### Week 2 Achievements:
 
-* S3 bucket successfully configured with versioning, SSE‑AES, and lifecycle policy.
-* EBS gp3 volume created, snapshotted, and restored successfully on EC2.
-* Backup plan for EBS set up and verified through AWS Backup.
-* Gained solid understanding of advanced storage features and data security best practices on AWS.
+* Completed all 13 core Deliverables for the **Financial Wellbeing Assistant** on Confluence.
+
+
+* Mastered Customer Journey Mapping, Personas, and JTBD frameworks from a Product Data Engineer perspective.
+
+
+* Created a low-fidelity Figma Prototype demonstrating user flows for cash flow forecasting and alerts.
+
+
+* Successfully passed the Sprint A Design Critique with positive feedback from Product Owners.

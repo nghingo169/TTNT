@@ -1,40 +1,51 @@
 ---
+
+## WEEK 4 WORKLOG (06/07/2026 - 10/07/2026)
+
+---
+
 title: "Week 4 Worklog"
-date: 2026-07-01
+date: 2026-07-10
 weight: 4
 chapter: false
-pre: " <b> 1.4. </b> "
+pre: "  1.4.  "
 includeInReport: true
 reportTableColumns:
-  - Day
-  - Task
-  - Completion Date
+
+* Day
+* Task
+* Completion Date
 reportHeadings:
-  - Week 4 Objectives
-  - Tasks to be carried out this week
-  - Week 4 Achievements
+* Week 4 Objectives
+* Tasks to be carried out this week
+* Week 4 Achievements
 reportType: worklog
+
 ---
 
 ### Week 4 Objectives:
 
-* Explore AWS security and identity management services: IAM, KMS, CloudTrail and GuardDuty.
-* Practice creating IAM Users, Groups, Roles and applying Least‑Privilege Policy.
-* Set up CloudTrail to record account activity and enable GuardDuty for threat detection.
+* Build **Silver Layer** transformation modules for cleaning and standardizing domain tables.
+* Implement Shift-Left Data Quality Rule enforcement and automatic Quarantine table routing.
+
+
+* Handle semi-structured JSON flattening and late-binding schema evolution.
+
+
 
 ### Tasks to be carried out this week:
 
 | Day | Task | Start Date | Completion Date | Reference Material |
-| --- | ---- | ---------- | --------------- | ------------------ |
-| 1 | - Read IAM fundamentals documentation <br> - Create IAM User, attach "ReadOnlyAccess" policy | 06/23/2026 | 06/23/2026 | https://cloudjourney.awsstudygroup.com/ |
-| 2 | - Create IAM Role for EC2 with S3 read/write and SSM GetParameters permissions | 06/24/2026 | 06/24/2026 | https://cloudjourney.awsstudygroup.com/ |
-| 3 | - Practice creating a Customer Managed Key (CMK) using AWS KMS <br> - Encrypt an S3 object | 06/25/2026 | 06/25/2026 | https://cloudjourney.awsstudygroup.com/ |
-| 4 | - Enable CloudTrail for all regions <br> - Review logs in S3 bucket | 06/26/2026 | 06/26/2026 | https://cloudjourney.awsstudygroup.com/ |
-| 5 | - Enable GuardDuty <br> - View sample findings and document response steps | 06/27/2026 | 06/27/2026 | https://cloudjourney.awsstudygroup.com/ |
+| --- | --- | --- | --- | --- |
+| 1 | - Build Silver domain transformations for Customer and Card (`customer_transformation.py`, `card_transformation.py`). | 06/07/2026 | 06/07/2026 | `src/pipeline/silver/` |
+| 2 | - Build Silver domain transformations for Transaction and FinCrime (`transaction_transformation.py`, `fincrime_transformation.py`). | 07/07/2026 | 07/07/2026 | `src/pipeline/silver/` |
+| 3 | - Implement Quality Rule Registry (`src/data_contracts/quality_rules/registry.py`) and validator logic. | 08/07/2026 | 08/07/2026 | `src/data_contracts/` |
+| 4 | - Build validation orchestrator `bronze_to_validated_silver.py` to route clean data to Silver and invalid rows to Quarantine. | 09/07/2026 | 09/07/2026 | `src/pipeline/silver/` |
+| 5 | - Run Silver transformation unit tests (`tests/silver/test_*_transformation.py`) and fix edge cases. | 10/07/2026 | 10/07/2026 | `tests/silver/` |
 
 ### Week 4 Achievements:
 
-* IAM Users, Groups and Roles created with principle of least privilege applied.
-* Customer Managed Key (CMK) created successfully; S3 data encrypted and decrypted.
-* CloudTrail recorded all API actions and stored logs in a backup bucket.
-* GuardDuty enabled, sample findings detected and remediation steps practiced.
+* Transformed raw Bronze data into cleansed, typed, and structured Silver atomic warehouse tables.
+* Implemented Shift-Left Data Quality checks that prevent corrupted data from polluting downstream analytics.
+* Built automated Quarantine routing logic for failed data quality checks.
+* Successfully handled nested JSON fields and dynamic schema variations.

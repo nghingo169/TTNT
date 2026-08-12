@@ -1,41 +1,49 @@
 ---
-title: "Internship Report"
-date: 2024-01-01
+title: "Internship Report Cover Page"
+date: 2026-08-14
 weight: 1
 chapter: false
 ---
 
-    
-# Internship Report
+<div align="center">
 
+### VIETNAM NATIONAL UNIVERSITY - HO CHI MINH CITY[cite: 8]
+### HO CHI MINH CITY UNIVERSITY OF TECHNOLOGY[cite: 8]
+### FACULTY OF COMPUTER SCIENCE AND ENGINEERING[cite: 8]
 
-### Student Information:
-&emsp; **Full Name:** Le Phuoc Minh Thien
+<br/>
 
-&emsp; **Phone Number:** 0768624405
+![HCMUT Logo](C:\Users\Admin\OneDrive\Tài liệu\tnghi hoc bai neee\HK252\TTNT\fcj-template\static\images\M2_Logo_BK.png)[cite: 3, 8]
 
-&emsp; **Email:** minhthien.lee2404@gmail.com
+<br/>
 
-&emsp; **University:** Ho Chi Minh City University of Technology - Vietnam National University
+# COURSE REPORT[cite: 8]
+# INTERNSHIP[cite: 8]
+### **(Course Code: CO3335)**[cite: 3, 8]
 
-&emsp; **Major:** Computer Science
+<br/>
 
-&emsp; **Class:** CC23KHM6
+### **SEMESTER 252, ACADEMIC YEAR 2025 – 2026**[cite: 3, 8]
 
-&emsp; **Internship Company:** Amazon Web Services Viet Nam Company Limited
+<br/>
 
-&emsp; **Internship Position:** Workforce Bootcamp - First Cloud AI Journey
+</div>
 
-&emsp; **Internship Duration:** From 01/06/2026 to 10/08/2026
+- **MAJOR:** COMPUTER SCIENCE[cite: 7, 8]
+- **TRAINING PROGRAM:** ENGLISH-TAUGHT PROGRAM[cite: 3, 7, 8]
 
-![Your profile picture](/images/avatar.png)
+<br/>
+<br/>
 
-### Report Content
+- **HOST COMPANY / ORGANIZATION:** NAB Innovation Centre Vietnam[cite: 7, 8]
+- **COMPANY SUPERVISOR:** Le Nhat Duy[cite: 8]
+- **FACULTY ADVISOR / MONITORING / EVALUATION LECTURER:** Duong Huynh Anh Duc[cite: 8]
+- **STUDENT:** NGO TIEU NGHI &emsp;&emsp;&emsp;&emsp; **STUDENT ID:** 2352799[cite: 7, 8]
 
-1.  [Worklog](1-Worklog/)
-2.  [Proposal](2-Proposal/)
-3.  [BlogsPosted](3-BlogsPosted/)
-4.  [Events Participated](4-EventParticipated/)
-5.  [Workshop](5-Workshop/)
-6.  [Self-evaluation](6-Self-evaluation/)
-7.  [Sharing and Feedback](7-Feedback/)
+<br/>
+
+<div align="center">
+
+**HO CHI MINH CITY, AUGUST 2026**[cite: 7, 8]
+
+</div>

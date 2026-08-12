@@ -1,6 +1,6 @@
 ---
 title: "Proposal"
-date: 2026-06-08
+date: 2026-06-15
 weight: 2
 chapter: false
 pre: " <b> 2. </b> "
@@ -8,191 +8,175 @@ pre: " <b> 2. </b> "
 
 ## Project Overview
 
-During the AWS First Cloud AI Journey internship, my team and I proposed **AWS CloudHop RAG**, a Retrieval-Augmented Generation system designed for questions that require information from more than one document. The project focuses on multi-hop question answering, where finding one relevant passage is often not enough to produce the correct answer.
+During the **TAC@NABVN Starcamp - Product Data Engineer** internship program at NAB Innovation Centre Vietnam (from June 15, 2026 to August 14, 2026), my team and I proposed a two-phase product engineering initiative combining **Product Mindset & Discovery** with **Zero-Trust Data Engineering Architecture**[cite: 1, 3]. 
 
-We chose **HotpotQA** as the main dataset because its questions are specifically designed around multi-hop reasoning and include annotated supporting evidence. This gives us a controlled environment to develop the retrieval pipeline and evaluate whether the system can find the documents needed to answer each question.
+The program bridges the gap between customer-centric product ideation and robust, secure enterprise data engineering[cite: 1]. The proposal is structured into two core components:
 
-The project is planned as an end-to-end application rather than only a retrieval experiment. Along with developing and evaluating the RAG pipeline, my team will deploy the main application components on AWS and provide a simple web interface for submitting questions and viewing generated answers with their supporting sources.
+1. **Financial Wellbeing Assistant (Product Ideation & Discovery):** A customer-centric banking solution designed to empower retail customers to track cash flows, reduce financial anxiety, and build healthy saving habits while providing NAB Relationship Managers (Bankers) with actionable financial health insights[cite: 1].
+2. **Zero-Trust Banking Data Pipeline (Production Technical Architecture):** An enterprise-grade, end-to-end Medallion Data Pipeline built on **Databricks Delta Lake**[cite: 1]. It processes multi-domain banking datasets (Customer, Card, Transaction, FinCrime) while enforcing strict Zero-Trust Security, Attribute-Based Access Control (ABAC), Shift-Left Data Quality rules, automated Quarantine routing, and CI/CD orchestration[cite: 1].
+
+---
 
 ## Problem and Motivation
 
-Retrieval-Augmented Generation improves question answering by retrieving relevant information from an external knowledge source before asking a language model to generate an answer. This helps the model rely on retrieved evidence instead of depending entirely on what it already knows.
+### 1. The Customer & Business Problem (Product Mindset)
+Banking customers often struggle to balance regular bills, credit commitments, and savings goals[cite: 1]. Without predictive visibility into their upcoming cash flows, customers face unexpected overdraft fees, missed payments, and severe financial stress[cite: 1]. Concurrently, bank relationship managers lack a unified 360-degree view to proactively detect early financial hardship signals and offer timely support[cite: 1].
 
-However, many RAG systems perform retrieval only once. This works well when the information needed to answer a question is contained in one relevant document, but it becomes less reliable when several pieces of evidence have to be connected.
+### 2. The Data & Governance Problem (Data Engineering)
+Modern financial institutions operate in highly regulated environments (e.g., APRA, CDR in Australia) where data breaches or compliance failures result in massive legal fines and loss of customer trust[cite: 1]. Traditional data pipelines often suffer from:
+* **Siloed Data & Schema Drift:** Upstream application changes frequently break downstream analytics[cite: 1].
+* **Data Quality Pollution:** Corrupted or bad data enters reporting warehouses due to late-stage testing[cite: 1].
+* **Privacy Risks & Unmasked PII:** Sensitive Personally Identifiable Information (PII) is exposed to unauthorized internal roles without dynamic masking or strict access control[cite: 1].
+* **Lack of Zero-Trust Security:** Over-privileged access models violate the principle of least privilege[cite: 1].
 
-A multi-hop question may require the system to first find one document, identify an important person, place, organization, or relationship from that evidence, and then use that information to locate another document. Missing either part of this evidence can lead to an incomplete or incorrect answer.
+Addressing these challenges requires a holistic approach: first designing data products around human needs (**Product Centricity**), and second, engineering highly resilient, secure, and governed data pipelines (**Zero-Trust Data Engineering**)[cite: 1].
 
-HotpotQA provides a useful benchmark for this problem because it contains both **bridge questions**, where one piece of evidence leads to another, and **comparison questions**, where information from multiple entities must be combined.
-
-For this project, we therefore want to explore whether combining lexical retrieval, semantic retrieval, and additional retrieval steps can provide more complete evidence for multi-hop questions while still being practical to deploy as an AWS application.
+---
 
 ## Objectives and Scope
 
 ### Project Objectives
 
-The main objectives of AWS CloudHop RAG are to:
+The main objectives of the internship project are:
 
-1. Develop a RAG pipeline that can answer multi-hop questions using evidence retrieved from multiple documents.
-2. Explore both lexical and semantic retrieval methods and combine their strengths through hybrid retrieval.
-3. Support additional retrieval steps when the evidence from the initial search is not sufficient.
-4. Evaluate retrieval quality separately from final answer quality so that retrieval failures can be identified clearly.
-5. Deploy the completed application using AWS services and provide a simple interface for interacting with the system.
-6. Build the project in a reproducible way so that retrieval artifacts, evaluation results, and deployment steps can be recreated and documented.
+1. **Apply Product Mindset & Design Thinking:** Conduct user research, formulate "5 Whys" root-cause analyses, map Customer Journeys, define Jobs-To-Be-Done (JTBD), and build Figma prototypes for the **Financial Wellbeing Assistant**[cite: 1].
+2. **Evaluate Solution Viability (SDVF Framework):** Assess product concepts against Suitability (regulatory compliance), Desirability (customer demand), Viability (business impact), and Feasibility (technical execution)[cite: 1].
+3. **Build an Enterprise Medallion Lakehouse Pipeline:** Implement a multi-layer pipeline (Bronze $\rightarrow$ Silver $\rightarrow$ Gold) on Databricks Delta Lake handling multi-domain banking data[cite: 1].
+4. **Enforce Shift-Left Data Quality & Quarantine:** Define explicit Data Contracts (YAML) and Quality Rules to validate raw data at ingestion, routing non-compliant records to Quarantine tables without halting pipeline execution[cite: 1].
+5. **Implement Zero-Trust Security & PII Governance:** Deploy Attribute-Based Access Control (ABAC), Row-Level Security (RLS), and Dynamic PII Masking via Unity Catalog to protect sensitive customer attributes[cite: 1].
+6. **Automate CI/CD & Observability:** Configure Databricks Asset Bundles, GitHub Actions workflows, SAST security scans, and execution telemetry monitoring[cite: 1].
 
 ### Project Scope
 
-The project will focus on the **HotpotQA Distractor** setting as the main development and evaluation environment.
+* **In Scope:**
+  * **Product Discovery:** Customer Personas (Retail User & NAB Banker), Empathy Mapping, JTBD, Low/High-Fidelity Figma Wireframes, and SDVF Assessment[cite: 1].
+  * **Data Pipeline Architecture:** Ingesting 4 domain datasets (Customer, Card, Transaction, FinCrime) into Bronze Delta tables[cite: 1].
+  * **Data Contracts & Quality:** Schema enforcement via YAML registries, data normalization, and quality rule validation (`bronze_to_validated_silver.py`)[cite: 1].
+  * **Gold Layer Analytics & Identity Resolution:** Building `Customer 360`, `Fraud Transaction Context`, `AML Investigation Context`, and SQL Master Data Management (MDM) candidate views[cite: 1].
+  * **Governance & CI/CD:** PII tagging, UDF masking, ABAC policy enforcement, PyTest automation, GitHub Actions integration, and execution telemetry[cite: 1].
 
-The planned scope includes:
+* **Out of Scope:**
+  * Providing regulated live financial advice within the customer prototype[cite: 1].
+  * Production deployment on live core-banking transaction systems with real customer funds[cite: 1].
 
-- HotpotQA data preparation;
-- lexical and dense retrieval;
-- hybrid retrieval;
-- multi-hop evidence retrieval;
-- evidence ranking and context construction;
-- LLM-based answer generation;
-- retrieval and answer evaluation;
-- AWS storage and vector search;
-- cloud backend deployment;
-- API and frontend integration;
-- functional testing and technical documentation.
-
-The project is intended as an internship-scale implementation and evaluation rather than a production service for large numbers of users. Large-scale traffic, enterprise authentication, and deployment over very large document collections are outside the main scope.
+---
 
 ## Proposed Solution and Architecture
 
-### Proposed RAG Approach
+### 1. Product Solution: Financial Wellbeing Assistant
 
-The proposed pipeline combines several retrieval strategies instead of relying on a single search method.
+The proposed **Financial Wellbeing Assistant** operates via two synchronized interfaces:
+* **Customer Mobile App:** Features a 30-day Predictive Cashflow Forecaster, Automated Micro-Savings Nudges, and Smart Bill Alerts[cite: 1].
+* **Banker Portal:** Provides Relationship Managers with a Customer 360 Financial Health Index, highlighting early financial hardship signals to trigger proactive outreach[cite: 1].
 
-The overall flow is:
+### 2. Technical Architecture: Zero-Trust Banking Pipeline
 
-**Question → Query Analysis → Lexical and Semantic Retrieval → Multi-Hop Retrieval → Evidence Ranking → Context Construction → LLM Generation → Answer and Supporting Sources**
+The pipeline follows the **Medallion Lakehouse Architecture** integrated with Databricks Unity Catalog and Zero-Trust Security controls[cite: 1]:
 
-For lexical retrieval, the project will use **BM25**, which is effective when important names, entities, or phrases in the question also appear directly in the source documents.
 
-For semantic retrieval, the project will use **BGE-M3 embeddings** to represent text as dense vectors. This allows the system to find relevant evidence even when the wording of the question and the source document is different.
+```
 
-The results from lexical and semantic retrieval will be combined into a shared candidate set. For questions that require several pieces of information, the system will also explore additional retrieval steps based on evidence found earlier in the process.
+[Raw Landing Source Data]
+│
+▼
+┌────────────────────────────────────────────────────────────────────────┐
+│ 1. BRONZE LAYER (Ingestion & Raw Delta Storage)                         │
+│    - Batch ingestion via PySpark / Delta Lake                          │
+│    - Schema validation against YAML Data Contracts                     │
+└──────┬─────────────────────────────────────────────────────────────────┘
+│
+▼
+┌────────────────────────────────────────────────────────────────────────┐
+│ 2. SILVER LAYER (Cleansing, Standardization & Shift-Left Data Quality) │
+│    - Quality Rule Engine & Schema Normalization                        │
+│    - Split: Validated Records ──► Silver Atomic Tables                 │
+│             Invalid Records   ──► Quarantine / Audit Tables             │
+└──────┬─────────────────────────────────────────────────────────────────┘
+│
+▼
+┌────────────────────────────────────────────────────────────────────────┐
+│ 3. GOLD LAYER (Business Aggregations & Analytical Contexts)            │
+│    - Customer 360 Health Context (Cashflow & Risk Features)            │
+│    - Fraud Transaction Context & AML Investigation Views               │
+│    - Identity Resolution & Entity Matching Views                       │
+└──────┬─────────────────────────────────────────────────────────────────┘
+│
+▼
+┌────────────────────────────────────────────────────────────────────────┐
+│ 4. ZERO-TRUST GOVERNANCE & OBSERVABILITY (Unity Catalog)                │
+│    - Dynamic PII Masking (UDFs) & Column-Level Tagging                 │
+│    - Attribute-Based Access Control (ABAC) & Row-Level Security         │
+│    - Automated Telemetry, Execution Logging & CI/CD Gating             │
+└────────────────────────────────────────────────────────────────────────┘
 
-After retrieval, the strongest evidence will be ranked and reduced to a focused context before it is passed to the language model. The final response will contain both the generated answer and the supporting sources used to construct the context.
+```
 
-### Proposed AWS Architecture
+### Component Responsibility Matrix
 
-The RAG pipeline will be deployed as a web application using several AWS services with separate responsibilities.
+| Component | Planned Role & Implementation |
+| :--- | :--- |
+| **Databricks Delta Lake** | Core Lakehouse storage providing ACID transactions, time travel, and schema evolution[cite: 1]. |
+| **PySpark Engine** | Distributed compute engine orchestrating Bronze, Silver, and Gold transformation pipelines[cite: 1]. |
+| **Unity Catalog** | Centralized data governance, cataloging, ABAC policy management, and PII tag enforcement[cite: 1]. |
+| **Data Contracts (YAML)** | Decoupled domain schema definitions and data quality rule inventories[cite: 1]. |
+| **GitHub Actions** | Automated CI/CD pipeline running PyTest, Flake8 linting, and Bandit SAST security scans[cite: 1]. |
+| **Databricks Asset Bundles** | Declarative pipeline deployment and job orchestration in non-production environments[cite: 1]. |
+| **Figma** | High-fidelity interactive prototyping for the Financial Wellbeing Assistant user flows[cite: 1]. |
 
-![AWS CloudHop RAG proposed architecture](/images/2-Proposal/AWS-RAG.drawio.png)
+---
 
-The planned application flow is:
+## Project Plan and Timeline
 
-**User → AWS Amplify → Amazon API Gateway → Amazon EC2 → Amazon S3 / Amazon S3 Vectors → Groq API → Answer**
+The 8-week internship is organized into **4 Sprints (2 weeks per Sprint)**, transitioning smoothly from Product Discovery to Technical Pipeline Engineering[cite: 1]:
 
-| Component | Planned Role |
-| --- | --- |
-| **AWS Amplify** | Host the web frontend used to submit questions and display answers |
-| **Amazon API Gateway** | Provide an HTTPS API between the browser and backend |
-| **Amazon EC2** | Run the FastAPI backend and coordinate the RAG pipeline |
-| **Amazon S3** | Store the processed corpus, BM25 artifacts, mappings, and manifests |
-| **Amazon S3 Vectors** | Store and search dense BGE-M3 vectors |
-| **AWS IAM** | Control access between AWS resources |
-| **AWS Systems Manager** | Support administration and access to the EC2 backend |
-| **Groq API** | Provide language-model inference for the RAG pipeline |
 
-The retrieval artifacts will be prepared before serving user queries. This keeps expensive preprocessing such as document preparation, indexing, and embedding generation outside the online request path.
+```
 
-At runtime, the EC2 backend will load the required lexical retrieval artifacts from Amazon S3 and query Amazon S3 Vectors for semantic retrieval. The retrieved evidence will then be processed by the RAG pipeline and sent to the language model to generate the final answer.
+┌────────────────────────────────────────────────────────────────────────┐
+│ PHASE 1: PRODUCT MINDSET & DISCOVERY (Weeks 1 - 2 / Sprint A)           │
+│ - Banking Domain Knowledge & APRA/CDR Compliance                       │
+│ - Design Thinking, "5 Whys", Customer Personas & JTBD Framework        │
+│ - SDVF Assessment & Sprint A Pitch Deck Presentation                   │
+└────────────────────────────────────────────────────────────────────────┘
+│
+▼
+┌────────────────────────────────────────────────────────────────────────┐
+│ PHASE 2: ZERO-TRUST PIPELINE ENGINEERING (Weeks 3 - 8 / Sprints 1 - 4) │
+│ - Weeks 3-4 (Sprint 1): Data Contracts & Bronze/Silver Pipelines       │
+│ - Weeks 5-6 (Sprint 2): Zero-Trust Governance, ABAC & Customer 360     │
+│ - Week 7 (Sprint 3): CI/CD Automation, Telemetry & Figma Finalization  │
+│ - Week 8 (Sprint 4): Final Showcase & Business Impact Assessment      │
+└────────────────────────────────────────────────────────────────────────┘
 
-## Project Plan
+```
 
-The project is planned as a team effort that progresses from AWS fundamentals and RAG research to retrieval development, evaluation, and full application deployment. Different components can be developed in parallel when appropriate, but the overall sequence is designed so that the retrieval pipeline is validated before it is integrated into the final AWS application.
+### Detailed Weekly Timeline
 
-### Development Phases
+| Week | Phase / Focus Area | Planned Activities & Deliverables |
+| :--- | :--- | :--- |
+| **Week 1** | **Onboarding & Problem Framing** | Onboard to TAC@NABVN Starcamp[cite: 1]. Learn banking domain fundamentals (Retail, Corporate, Regulatory Compliance)[cite: 1]. Kick off **Financial Wellbeing Assistant** project[cite: 1]. Conduct "5 Whys" analysis and write Confluence Deliverables 1 & 7[cite: 1]. |
+| **Week 2** | **Customer Discovery & SDVF Pitch** | Build Customer Personas (Alex & Sarah) and JTBD mappings[cite: 1]. Execute SDVF Assessment and Responsible Design evaluation[cite: 1]. Draft low-fidelity wireframes[cite: 1]. Present Sprint A proposal pitch deck to Product Owners[cite: 1]. |
+| **Week 3** | **Data Contracts & Bronze Layer** | Onboard `zero-trust-banking-pipeline` codebase[cite: 1]. Define YAML Data Contracts for 4 domains[cite: 1]. Implement `source_to_bronze_ingestion.py` PySpark scripts and write Bronze unit tests[cite: 1]. |
+| **Week 4** | **Silver Transformations & Data Quality** | Build Silver domain transformations (`customer`, `card`, `transaction`, `fincrime`)[cite: 1]. Implement Quality Rule Registry and build `bronze_to_validated_silver.py` with automatic Quarantine routing[cite: 1]. |
+| **Week 5** | **Zero-Trust Governance & ABAC** | Configure Databricks Unity Catalog permissions, schemas, and UDFs[cite: 1]. Apply dynamic PII masking and ABAC security policies[cite: 1]. Build SQL views for Customer 360 identity candidate resolution[cite: 1]. |
+| **Week 6** | **Gold Aggregations & Diagnostics** | Build Gold Layer pipelines (`customer_360_context.py`, `fraud_transaction_context.py`, `aml_investigation_context.py`)[cite: 1]. Write diagnostic SQL queries for unresolved KYC and Employment records[cite: 1]. |
+| **Week 7** | **CI/CD, Monitoring & Figma Prototype** | Configure GitHub Actions CI/CD workflows and Databricks Asset Bundles[cite: 1]. Build telemetry monitoring views[cite: 1]. Finalize high-fidelity Figma Prototype and Confluence Sprint Artefacts[cite: 1]. |
+| **Week 8** | **Final Showcase & Submission** | Deliver Final Showcase presentation to NAB Product Owners and Data Leads[cite: 1]. Evaluate business impact metrics[cite: 1]. Complete CSE HCMUT Internship Report and obtain company approvals[cite: 3]. |
 
-**Phase 1 – AWS Foundation and Project Definition**
-
-The team will first build a shared understanding of the AWS services required for the project and define the CloudHop RAG problem, objectives, architecture, and evaluation approach. This phase also includes studying RAG, text embeddings, multi-hop question answering, and the structure of HotpotQA.
-
-**Phase 2 – Dataset Preparation and Retrieval Baselines**
-
-HotpotQA will be inspected and transformed into a consistent format for retrieval experiments. Initial lexical and dense retrieval methods will be developed to establish a baseline and identify the main retrieval difficulties of multi-hop questions.
-
-**Phase 3 – Advanced Multi-Hop Retrieval**
-
-The retrieval pipeline will be extended with BM25, BGE-M3 embeddings, hybrid retrieval, parent-child document representation, query decomposition, adaptive multi-hop retrieval, and evidence reranking. The goal of this phase is to improve the system's ability to recover complementary evidence from multiple documents.
-
-**Phase 4 – Evaluation and Artifact Preparation**
-
-The team will evaluate retrieval quality using HotpotQA supporting evidence and measure answer quality using Exact Match and F1. Retrieval artifacts such as the processed corpus, BM25 index, document mappings, embeddings, and manifests will also be prepared in a reusable format for deployment.
-
-**Phase 5 – AWS Backend and Retrieval Deployment**
-
-The validated retrieval artifacts will be moved to AWS. Amazon S3 will store the corpus and retrieval artifacts, while Amazon S3 Vectors will provide dense vector search. The RAG backend will be deployed on Amazon EC2 and configured with the permissions required to access the storage and vector-search services.
-
-**Phase 6 – API and Frontend Integration**
-
-Amazon API Gateway will be used to expose the backend through an HTTPS API. A web frontend will be deployed through AWS Amplify and connected to the API so that users can submit questions and view generated answers together with supporting sources.
-
-**Phase 7 – System Validation and Finalization**
-
-The complete application will be tested from the frontend through the API, backend, retrieval services, and language model. The team will validate functionality, retrieval behavior, answer quality, and response time before finalizing the deployment workshop and project documentation.
-
-### Project Timeline
-
-| Week | Planned Team Activities |
-| --- | --- |
-| **Week 1** | **AWS foundation and project orientation.** Review AWS fundamentals, AWS Console and CLI, EC2, and the internship requirements. Discuss possible AI project directions and prepare the development environment. |
-| **Week 2** | **AWS storage, security, and networking.** Study and practice with Amazon S3, IAM, VPC, security groups, and service permissions. Establish the AWS knowledge required for the later application architecture. |
-| **Week 3** | **Project definition and RAG research.** Study embeddings, semantic search, RAG, and multi-hop question answering. Select HotpotQA as the benchmark and define the initial CloudHop RAG architecture, objectives, and evaluation strategy. |
-| **Week 4** | **Dataset preparation and retrieval baselines.** Prepare HotpotQA data, align questions with supporting evidence, and develop initial lexical and dense retrieval methods to establish a baseline. |
-| **Week 5** | **Advanced retrieval development.** Develop BM25 and BGE-M3 retrieval, hybrid search, parent-child document representation, query decomposition, adaptive multi-hop retrieval, and evidence reranking. |
-| **Week 6** | **Pipeline engineering and evaluation preparation.** Organize reusable project modules and configurations, validate dataset alignment, build versioned retrieval artifacts, and prepare the benchmark and evaluation workflow. |
-| **Week 7** | **Evaluation and AWS deployment preparation.** Evaluate retrieval and answer quality, analyze latency, finalize the production architecture, upload retrieval artifacts to Amazon S3, prepare Amazon S3 Vectors, and configure the Amazon EC2 backend environment. |
-| **Week 8** | **Full AWS integration and project finalization.** Complete the EC2 FastAPI backend deployment, connect Amazon S3 and S3 Vectors, configure IAM and Systems Manager access, expose the backend through Amazon API Gateway, deploy the frontend with AWS Amplify, validate the complete end-to-end application, consolidate evaluation results, and finalize the workshop and technical documentation. |
-
-## Budget Estimation
-
-AWS CloudHop RAG is planned as a small internship and demonstration workload with relatively low storage and request volume. Most managed services used by the application are usage-based, while the backend compute instance is expected to account for the largest part of the running cost.
-
-| Resource | Expected Usage | Cost Consideration |
-| --- | --- | --- |
-| **Amazon EC2** | One backend instance during development and demonstration | Main continuous compute cost |
-| **Amazon S3** | Store corpus and retrieval artifacts | Low storage cost at project scale |
-| **Amazon S3 Vectors** | Store and query dense vectors | Depends on stored vectors and query usage |
-| **Amazon API Gateway** | Low-volume API requests | Request-based |
-| **AWS Amplify** | Host a small web frontend | Build, storage, and transfer usage |
-| **AWS IAM** | Control AWS resource permissions | No direct service charge |
-| **AWS Systems Manager** | EC2 administration | Minimal or no direct cost for the planned usage |
-| **Groq API** | LLM inference | Depends on model and token usage |
-
-The project will keep the deployment small and avoid keeping unnecessary resources active. Compute resources can be stopped when they are not needed, while persistent retrieval artifacts remain stored separately in S3 and S3 Vectors.
-
-The budget will therefore be managed primarily by controlling EC2 runtime, limiting unnecessary requests, and cleaning up resources after the workshop and evaluation are complete.
-
-## Risks and Mitigation
-
-| Risk | Possible Impact | Planned Mitigation |
-| --- | --- | --- |
-| Relevant supporting evidence is not retrieved | The LLM receives incomplete context and may produce an incorrect answer | Combine lexical and semantic retrieval and evaluate supporting-evidence coverage |
-| Multi-hop retrieval increases response time | Queries may take too long to complete | Limit retrieval depth and candidate size where necessary |
-| LLM API rate limits or temporary failures | Evaluation or generation may be interrupted | Use controlled request rates, retries, and resumable evaluation |
-| Dataset or retrieval artifacts are inconsistent | Evaluation results may not accurately reflect retrieval quality | Validate dataset alignment and artifact integrity before benchmarking |
-| AWS permissions or configuration are incorrect | Application components may fail to communicate | Use IAM roles, least-privilege permissions, and staged functional testing |
-| Cloud resources consume more than expected | Project cost may increase | Keep the deployment small, stop unused compute, and clean up resources after use |
+---
 
 ## Expected Outcomes
 
-By the end of the project, my team expects to have a working multi-hop RAG application that can retrieve evidence from HotpotQA, combine information from multiple documents when necessary, and generate answers grounded in the retrieved context.
+By the end of the internship program, the project delivers the following tangible outcomes:
 
-The main expected outputs are:
+1. **Product Discovery Artefacts:**
+   * A fully documented **Financial Wellbeing Assistant** space on Confluence covering 13 comprehensive deliverables (Personas, JTBD, SDVF, Design Principles, Feature Specs)[cite: 1].
+   * An interactive, high-fidelity **Figma Prototype** demonstrating retail customer and banker user flows[cite: 1].
 
-- a reusable HotpotQA data preparation workflow;
-- lexical and semantic retrieval components;
-- a hybrid and multi-hop retrieval pipeline;
-- a reproducible evaluation workflow;
-- retrieval artifacts that can be stored and reused independently of the application runtime;
-- an AWS-hosted backend and vector-search environment;
-- a web interface for submitting questions and viewing answers with supporting sources;
-- quantitative evaluation of retrieval and answer quality;
-- a complete AWS deployment workshop and technical documentation.
-
-Beyond the final application itself, the project is also intended to give my team practical experience connecting retrieval and language-model experimentation with cloud infrastructure. HotpotQA provides a controlled benchmark for this internship, while the overall RAG design can later be adapted to other document collections that require evidence-based question answering.
+2. **Technical Data Engineering Artefacts:**
+   * A fully functional, production-ready **Zero-Trust Banking Data Pipeline** built on Databricks Delta Lake[cite: 1].
+   * Standardized **YAML Data Contracts** enforcing schema consistency across 4 banking domains[cite: 1].
+   * A **Shift-Left Quality Control Engine** with automated Quarantine table routing[cite: 1].
+   * An **ABAC & Dynamic PII Masking Security Layer** compliant with banking privacy standards[cite: 1].
+   * **Gold Layer Context Views** powering Customer 360 analytics, Fraud detection, and AML investigations[cite: 1].
+   * An automated **CI/CD Pipeline (GitHub Actions)** with unit tests, linting, SAST security checks, and telemetry logging[cite: 1].
